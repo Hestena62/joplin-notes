@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master</title>
+    <style>
+        :root {
+            --bg: #f9f9f9;
+            --paper: #fff;
+            --text: #333;
+            --text-light: #777;
+            --border: #eee;
+            --accent: #d32f2f;
+            --code-bg: #f4f4f4;
+        }
+
+        [data-theme="dark"] {
+            --bg: #121212;
+            --paper: #1e1e1e;
+            --text: #ddd;
+            --text-light: #999;
+            --border: #333;
+            --accent: #ff5252;
+            --code-bg: #2a2a2a;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.8;
+            color: var(--text);
+            background: var(--bg);
+            margin: 0;
+            padding: 0;
+            transition: background 0.3s;
+        }
+
+        .wrapper {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 40px;
+            background: var(--paper);
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .top-utils {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            font-size: 13px;
+            color: var(--text-light);
+            font-family: sans-serif;
+        }
+
+        .utils-right { display: flex; gap: 10px; }
+        .util-btn { background: none; border: 1px solid var(--border); color: var(--text); cursor: pointer; padding: 2px 8px; font-size: 11px; }
+
+        h1 { font-size: 32px; margin-bottom: 10px; line-height: 1.2; font-weight: normal; }
+        .meta { font-size: 13px; color: var(--text-light); margin-bottom: 40px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+        
+        .content { font-size: 18px; }
+        .content.font-sm { font-size: 15px; }
+        .content.font-lg { font-size: 22px; }
+
+        .content img { max-width: 100%; height: auto; display: block; margin: 20px auto; }
+        .content pre { background: var(--code-bg); padding: 15px; overflow-x: auto; font-family: monospace; font-size: 14px; border: 1px solid var(--border); }
+        
+        .tags { margin-top: 50px; padding-top: 20px; border-top: 1px solid var(--border); }
+        .tag { background: var(--code-bg); padding: 3px 8px; font-size: 12px; margin-right: 5px; color: var(--text-light); border-radius: 3px; }
+        
+        footer { text-align: center; margin-top: 40px; color: var(--text-light); font-size: 12px; padding-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="top-utils">
+            <a href="/index" style="color: var(--text-light); text-decoration: none;">← Home</a>
+            <div class="utils-right">
+                
+                <span>1 min read</span>
+                <button class="util-btn" onclick="adjustFont('sm')">A-</button>
+                <button class="util-btn" onclick="adjustFont('md')">A</button>
+                <button class="util-btn" onclick="adjustFont('lg')">A+</button>
+                <button class="util-btn" id="theme-btn">Theme</button>
+            </div>
+        </div>
+        
+        <header>
+            <h1>Master</h1>
+            <div class="meta">
+                Updated April 24th, 2026
+            </div>
+        </header>
+
+        <div class="content" id="main-content">
+            <p>Master</p>
+<ul>
+<li><a title="Important Info">Important Info</a></li>
+<li><a title="Week 00">Week 00</a></li>
+</ul>
+
+        </div>
+
+        <div class="tags">
+            
+        </div>
+
+        <footer>
+            Shared from Joplin
+        </footer>
+    </div>
+
+    <script>
+        const btn = document.getElementById('theme-btn');
+        const updateBtnText = (t) => btn.textContent = t === 'dark' ? 'Light' : 'Dark';
+        
+        const storedTheme = localStorage.getItem('theme');
+        if (storedTheme) {
+            document.documentElement.setAttribute('data-theme', storedTheme);
+            updateBtnText(storedTheme);
+        }
+
+        btn.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            updateBtnText(theme);
+        });
+
+        function adjustFont(size) {
+            const content = document.getElementById('main-content');
+            content.classList.remove('font-sm', 'font-lg');
+            if (size === 'sm') content.classList.add('font-sm');
+            if (size === 'lg') content.classList.add('font-lg');
+        }
+    </script>
+</body>
+</html>

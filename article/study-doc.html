@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Doc</title>
+    <style>
+        :root {
+            --bg: #f9f9f9;
+            --paper: #fff;
+            --text: #333;
+            --text-light: #777;
+            --border: #eee;
+            --accent: #d32f2f;
+            --code-bg: #f4f4f4;
+        }
+
+        [data-theme="dark"] {
+            --bg: #121212;
+            --paper: #1e1e1e;
+            --text: #ddd;
+            --text-light: #999;
+            --border: #333;
+            --accent: #ff5252;
+            --code-bg: #2a2a2a;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.8;
+            color: var(--text);
+            background: var(--bg);
+            margin: 0;
+            padding: 0;
+            transition: background 0.3s;
+        }
+
+        .wrapper {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 40px;
+            background: var(--paper);
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .top-utils {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            font-size: 13px;
+            color: var(--text-light);
+            font-family: sans-serif;
+        }
+
+        .utils-right { display: flex; gap: 10px; }
+        .util-btn { background: none; border: 1px solid var(--border); color: var(--text); cursor: pointer; padding: 2px 8px; font-size: 11px; }
+
+        h1 { font-size: 32px; margin-bottom: 10px; line-height: 1.2; font-weight: normal; }
+        .meta { font-size: 13px; color: var(--text-light); margin-bottom: 40px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+        
+        .content { font-size: 18px; }
+        .content.font-sm { font-size: 15px; }
+        .content.font-lg { font-size: 22px; }
+
+        .content img { max-width: 100%; height: auto; display: block; margin: 20px auto; }
+        .content pre { background: var(--code-bg); padding: 15px; overflow-x: auto; font-family: monospace; font-size: 14px; border: 1px solid var(--border); }
+        
+        .tags { margin-top: 50px; padding-top: 20px; border-top: 1px solid var(--border); }
+        .tag { background: var(--code-bg); padding: 3px 8px; font-size: 12px; margin-right: 5px; color: var(--text-light); border-radius: 3px; }
+        
+        footer { text-align: center; margin-top: 40px; color: var(--text-light); font-size: 12px; padding-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="top-utils">
+            <a href="/index" style="color: var(--text-light); text-decoration: none;">← Home</a>
+            <div class="utils-right">
+                
+                <span>18 min read</span>
+                <button class="util-btn" onclick="adjustFont('sm')">A-</button>
+                <button class="util-btn" onclick="adjustFont('md')">A</button>
+                <button class="util-btn" onclick="adjustFont('lg')">A+</button>
+                <button class="util-btn" id="theme-btn">Theme</button>
+            </div>
+        </div>
+        
+        <header>
+            <h1>Study Doc</h1>
+            <div class="meta">
+                Updated April 24th, 2026
+            </div>
+        </header>
+
+        <div class="content" id="main-content">
+            
+<html class="jop-noMdConv"><head class="jop-noMdConv">
+    
+    <title class="jop-noMdConv">Study Doc</title>
+<pre><code>&lt;style&gt;
+/*** Start default CSS ***/
+* { margin: 0; padding: 0; font-weight: normal; }
+table, tr, td { border-color: #A3A3A3; }
+ul, ol { padding: 0; }
+.title .outline-element { display: inline; }
+.title .outline-element:nth-child(2) { margin-left: 10px !important; }
+.container-outline { font-family: Calibri, sans-serif; font-size: 6pt; }
+.ink-text, .ink-space { display: inline-block; position: relative; vertical-align: bottom; }
+.ink-text { top: 0; left: 0; }
+
+/* Icons */
+.note-tag-icon {
+    position: relative;
+    --note-tag-left: -23px;
+    --note-tag-width: 16px;
+    --note-tag-height: 16px;
+}
+.note-tag-icon.-large {
+    --note-tag-left: -25px;
+    --note-tag-width: 20px;
+    --note-tag-height: 20px;
+}
+.note-tag-icon &gt; img, .note-tag-icon &gt; svg {
+    width: var(--note-tag-width);
+    height: var(--note-tag-height);
+    left: var(--note-tag-left);
+}
+
+.tagged-list { list-style: none; padding-left: 0; }
+
+.note-tag-icon &gt; svg, .note-tag-icon &gt; img { position: absolute; }
+.icon-secondary &gt; svg, .icon-secondary &gt; img { position: absolute; fill: black; filter: drop-shadow(0 0 2px white); height: 12px; top: -1px; }
+.icon-secondary &gt; .content { position: absolute; color: black; filter: drop-shadow(0 0 2px white); font-size: 10px; color: black; top: -1px; user-select: none; }
+/*** End default CSS ***/
+
+.list-0 li { padding-left: 10px; }
+.list-0 li::marker { font-family: Calibri; font-size: 11pt; }
+.list-1 li { padding-left: 10px; }
+.list-1 li::marker { font-family: Calibri; font-size: 11pt; }
+.list-2 li { padding-left: 10px; }
+.list-2 li::marker { font-family: Calibri; font-size: 11pt; }
+
+&lt;/style&gt;
+</code></pre>
+</head>
+<body class="jop-noMdConv">
+<div class="title jop-noMdConv" style="left:48px;position:absolute;top:24px"><div class="container-outline jop-noMdConv" style="width:624px"><div class="outline-element jop-noMdConv" style="margin-left:0px"><span style="font-family:Calibri Light;font-size:20pt" class="jop-noMdConv">Study Doc</span></div>
+</div><div class="container-outline jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><span style="color:rgb(102,102,102);font-family:Calibri;font-size:10pt" class="jop-noMdConv">Thursday, October 02, 2025</span></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><span style="color:rgb(102,102,102);font-family:Calibri;font-size:10pt" class="jop-noMdConv">7:52 AM</span></div>
+</div></div><div class="container-outline jop-noMdConv" style="left:48px;position:absolute;top:115px;width:624px"><div class="outline-element jop-noMdConv" style="margin-left:0px"><h1 style="color:rgb(30,78,121);font-family:Calibri;font-size:16pt" class="jop-noMdConv">Nervous System Study Guide</h1></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><h2 style="color:rgb(46,117,181);font-family:Calibri;font-size:14pt" class="jop-noMdConv">Short-Answer Quiz</h2></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-style:italic;padding-bottom:7px;padding-top:7px" class="jop-noMdConv">Answer each of the following questions in 2-3 sentences, drawing upon the provided source material.</p></div><ol class="list-0 jop-noMdConv" style="left:-10px;position:relative"><li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">What are the two main anatomical divisions of the nervous system, and what structures comprise each?</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Describe the three primary functions of the nervous system.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Explain the role of the sodium-potassium pump in maintaining a neuron's resting membrane potential.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">What is an action potential, and what ionic event initiates the rapid depolarization phase?</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Distinguish between the afferent and efferent divisions of the peripheral nervous system.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Identify the four types of neuroglial cells found in the central nervous system and state one primary function for each.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">How does a neurotransmitter transmit a signal from a presynaptic neuron to a postsynaptic neuron across the synaptic cleft?</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">What is a myelin sheath, and which two cell types are responsible for its formation in the nervous system?</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Contrast chemically gated ion channels with voltage-gated ion channels, including the type of stimulus that opens them.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Describe the structural differences between a bipolar neuron and a multipolar neuron.</span></li>
+</ol>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><h2 style="color:rgb(46,117,181);font-family:Calibri;font-size:14pt" class="jop-noMdConv">Quiz Answer Key</h2></div><ol class="list-1 jop-noMdConv" style="left:-10px;position:relative"><li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The two main anatomical divisions are the Central Nervous System (CNS) and the Peripheral Nervous System (PNS). The CNS is composed of the brain and spinal cord, while the PNS consists of all nervous tissue outside the CNS, including cranial and spinal nerves.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The nervous system has three specific functions: receiving sensory input from internal and external environments, performing information processing and integration, and generating motor output. For example, it processes the smell of cookies (input), evokes a memory (integration), and causes salivation and movement toward the cookies (output).</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The sodium-potassium pump is an active transport protein that moves ions against their concentration gradients to maintain resting potential. It expends energy (ATP) to pump three sodium ions out of the neuron for every two potassium ions it pumps in, which helps keep the inside of the cell negative relative to the outside.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">An action potential is a rapid, temporary reversal of charge across the neuron's membrane that propagates down the axon. The rapid depolarization phase is initiated by the opening of voltage-gated sodium channels once the membrane potential reaches a threshold (around -55 mV), causing a massive influx of positively charged sodium ions.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The afferent (or sensory) division of the PNS carries sensory information from receptors in the body toward the CNS. The efferent (or motor) division carries motor commands from the CNS to effectors, such as muscles and glands, to initiate a response.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The four CNS neuroglia are: </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">astrocytes</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">, which repair damaged tissue and control the interstitial environment; </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">ependymal cells</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">, which line the spinal cord and brain ventricles, producing and circulating cerebrospinal fluid; </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">oligodendrocytes</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">, which form the myelin sheath around CNS axons; and </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">microglia</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">, which act as the main form of immunity by cleaning up waste and pathogens.</span></span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">When an action potential reaches the axon terminal, it triggers the release of neurotransmitters from synaptic vesicles into the synaptic cleft. These chemical messengers diffuse across the cleft and bind to receptors on the postsynaptic neuron's membrane, typically opening chemically gated ion channels and causing a new electrical signal in the receiving cell.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A myelin sheath is a protective, insulating covering composed of lipids that wraps around the axon of a neuron, dramatically increasing the speed of nerve impulse transmission. In the CNS, myelin is formed by </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">oligodendrocytes</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">, while in the PNS, it is formed by </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Schwann cells</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">.</span></span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Chemically gated channels (or ligand-gated channels) open or close in response to the binding of specific molecules, such as neurotransmitters, at a receptor site. Voltage-gated channels open or close in response to changes in the electrical membrane potential across the neuronal membrane.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Bipolar neurons have two distinct processes extending from the cell body (soma): one axon and one dendrite, with the soma situated between them. Multipolar neurons, the most common type in the CNS, have multiple processes, including a single long axon and many dendrites branching directly from the cell body.</span></li>
+</ol>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><h2 style="color:rgb(46,117,181);font-family:Calibri;font-size:14pt" class="jop-noMdConv">Essay Questions</h2></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-style:italic;padding-bottom:7px;padding-top:7px" class="jop-noMdConv">Construct detailed responses to the following prompts, synthesizing information from across the provided source materials.</p></div><ol class="list-2 jop-noMdConv" style="left:-10px;position:relative"><li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Trace the complete pathway of a nervous signal, starting with a sensory stimulus (like a pinprick on the skin) and ending with a motor response (the withdrawal of a hand). Your explanation should detail the roles of the PNS and CNS, the different functional classes of neurons involved (sensory, interneuron, motor), the generation and propagation of an action potential, and the process of synaptic transmission.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Discuss the critical importance of ion channels to all aspects of neuronal function. Differentiate between passive (leak) channels and active (gated) channels, explaining how their unique properties and distributions along the neuron contribute to establishing resting potential, generating graded potentials at the dendrite, and propagating an all-or-nothing action potential along the axon.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Compare and contrast the structure, location, and function of the six types of neuroglial cells (four in the CNS, two in the PNS). Explain how their collective supportive roles are indispensable for neuron survival, protection, and the efficient transmission of nerve impulses.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Illustrate and describe the complete sequence of events that constitute an action potential. Explain the key phases—resting state, threshold, depolarization, repolarization, and hyperpolarization (refractory period)—by detailing the status (open/closed) of voltage-gated sodium and potassium channels and the resulting movement of ions across the membrane at each stage.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Explain how opioids, such as morphine, interact with the nervous system to produce their effects, including pain relief and the potential for addiction. Describe the specific receptors involved and the main pathways and functions within the central nervous system that are affected.</span></li>
+</ol>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><h2 style="color:rgb(46,117,181);font-family:Calibri;font-size:14pt" class="jop-noMdConv">Glossary of Key Terms</h2></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><table border="1" cellpadding="0" cellspacing="0" style="border:1pt solid #A3A3A3;border-collapse:collapse" class="jop-noMdConv"><tbody class="jop-noMdConv"><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Term</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Definition</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Action Potential</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">An electrical impulse or signal that travels down an axon; a temporary reversal of charge across the membrane caused by rapid changes in permeability to sodium and potassium ions.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Afferent Division</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The part of the Peripheral Nervous System (PNS) that carries sensory information from receptors towards the Central Nervous System (CNS).</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Astrocyte</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The largest and most numerous glial cell in the CNS; a star-shaped cell that repairs damaged neural tissue and helps control the interstitial environment.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Autonomic Nervous System</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A division of the PNS that controls subconscious, involuntary actions such as smooth muscle contraction, cardiac muscle, and glandular secretions. It is further divided into the sympathetic and parasympathetic divisions.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Axon</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A long, slender extension of a neuron that carries electrical signals (action potentials) away from the cell body to the axon terminals.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Axon Hillock</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The thicker, conical region of a neuron's cell body where it connects to the axon; it is critical for initiating the action potential.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Bipolar Neuron</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A type of neuron that has two processes extending from the cell body: one dendrite and one axon. These are rare and found in special sensory organs.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Central Nervous System (CNS)</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The anatomical division of the nervous system composed of the brain and the spinal cord. Its function is to process and coordinate information.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Depolarization</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A shift in the membrane potential toward 0 mV, making the inside of the cell less negative (or positive). In an action potential, it is caused by the rapid influx of sodium ions.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Dendrite</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Highly branched extensions of a neuron's cell body that receive information from other neurons. They contain chemically-gated ion channels.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Efferent Division</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The part of the Peripheral Nervous System (PNS) that carries motor commands from the CNS to effectors like muscles and glands.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Interneuron</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A neuron located entirely within the CNS (brain and spinal cord) that communicates between sensory and motor neurons; also called association neurons.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Membrane Potential</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The difference in electrical charge (voltage) across a cell's plasma membrane, created by the separation of positive and negative ions.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Motor Neuron</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A neuron that carries nerve impulses away from the CNS to an effector (muscle or gland). Most are multipolar in structure.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Myelin Sheath</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A protective, insulating layer made of lipids that surrounds many axons, formed by oligodendrocytes (in the CNS) or Schwann cells (in the PNS). It dramatically increases the speed of action potential propagation.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Neuroglia (Glial Cells)</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Supportive cells of the nervous system that protect and nourish neurons, form myelin, and maintain the interstitial environment. They are non-neuronal.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Neuron</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The basic functional unit of the nervous system; a specialized cell that receives, processes, and transmits information through electrical and chemical signals.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Neurotransmitter</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A chemical messenger released from the axon terminal of a presynaptic neuron that travels across the synaptic cleft to bind with receptors on a postsynaptic cell, transmitting a signal.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Nodes of Ranvier</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The tiny gaps between adjacent Schwann cells or sections of oligodendrocytes on a myelinated axon where the axonal membrane is exposed. Action potentials "jump" between these nodes.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Oligodendrocyte</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A type of glial cell in the CNS that wraps its membrane around axons to form the myelin sheath.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Peripheral Nervous System (PNS)</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The anatomical division of the nervous system consisting of all nervous tissue outside the brain and spinal cord, including cranial and spinal nerves.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Postsynaptic Neuron</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The neuron that receives a neurotransmitter signal from another neuron at a synapse.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Presynaptic Neuron</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The neuron that sends a signal by releasing neurotransmitter into the synapse.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Repolarization</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The process of restoring the resting membrane potential after depolarization. It is caused by the closing of sodium channels and the opening of potassium channels, allowing positive potassium ions to exit the cell.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Resting Potential</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The membrane potential of a neuron when it is not actively sending a signal, typically around -70 mV. The inside of the cell is negative relative to the outside.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Saltatory Propagation</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The "leaping" movement of an action potential along a myelinated axon from one node of Ranvier to the next. It is much faster and more energy-efficient than continuous propagation.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Schwann Cell</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A type of glial cell in the PNS that wraps itself around a single axon to form its myelin sheath.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Sensory Neuron</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A neuron that carries sensory information from the PNS toward the CNS. Most sensory neurons in the PNS are unipolar.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Sodium-Potassium Pump</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">An active transport protein in the neuronal membrane that pumps three sodium ions out of the cell and two potassium ions into the cell, helping to maintain the resting potential.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Somatic Nervous System</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A division of the PNS that controls voluntary movements of skeletal muscles.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Synapse</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The site of communication between a neuron and another cell (neuron, muscle, or gland), which includes the presynaptic terminal, the synaptic cleft, and the postsynaptic membrane.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Synaptic Cleft</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The small physical gap that separates the presynaptic neuron from the postsynaptic cell at a synapse.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Threshold</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The level of membrane potential that must be reached (around -55 mV) for an action potential to be generated. At threshold, voltage-gated sodium channels open rapidly.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Unipolar Neuron</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A neuron in which the dendrites and axon are continuous, and the cell body lies off to one side. These are the typical structure for sensory neurons of the PNS.</p></div>
+</td></tr></tbody></table></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> </p></div>
+</div>
+</body></html>
+        </div>
+
+        <div class="tags">
+            
+        </div>
+
+        <footer>
+            Shared from Joplin
+        </footer>
+    </div>
+
+    <script>
+        const btn = document.getElementById('theme-btn');
+        const updateBtnText = (t) => btn.textContent = t === 'dark' ? 'Light' : 'Dark';
+        
+        const storedTheme = localStorage.getItem('theme');
+        if (storedTheme) {
+            document.documentElement.setAttribute('data-theme', storedTheme);
+            updateBtnText(storedTheme);
+        }
+
+        btn.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            updateBtnText(theme);
+        });
+
+        function adjustFont(size) {
+            const content = document.getElementById('main-content');
+            content.classList.remove('font-sm', 'font-lg');
+            if (size === 'sm') content.classList.add('font-sm');
+            if (size === 'lg') content.classList.add('font-lg');
+        }
+    </script>
+</body>
+</html>

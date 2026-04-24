@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Text</title>
+    <style>
+        :root {
+            --bg: #f9f9f9;
+            --paper: #fff;
+            --text: #333;
+            --text-light: #777;
+            --border: #eee;
+            --accent: #d32f2f;
+            --code-bg: #f4f4f4;
+        }
+
+        [data-theme="dark"] {
+            --bg: #121212;
+            --paper: #1e1e1e;
+            --text: #ddd;
+            --text-light: #999;
+            --border: #333;
+            --accent: #ff5252;
+            --code-bg: #2a2a2a;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.8;
+            color: var(--text);
+            background: var(--bg);
+            margin: 0;
+            padding: 0;
+            transition: background 0.3s;
+        }
+
+        .wrapper {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 40px;
+            background: var(--paper);
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .top-utils {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            font-size: 13px;
+            color: var(--text-light);
+            font-family: sans-serif;
+        }
+
+        .utils-right { display: flex; gap: 10px; }
+        .util-btn { background: none; border: 1px solid var(--border); color: var(--text); cursor: pointer; padding: 2px 8px; font-size: 11px; }
+
+        h1 { font-size: 32px; margin-bottom: 10px; line-height: 1.2; font-weight: normal; }
+        .meta { font-size: 13px; color: var(--text-light); margin-bottom: 40px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+        
+        .content { font-size: 18px; }
+        .content.font-sm { font-size: 15px; }
+        .content.font-lg { font-size: 22px; }
+
+        .content img { max-width: 100%; height: auto; display: block; margin: 20px auto; }
+        .content pre { background: var(--code-bg); padding: 15px; overflow-x: auto; font-family: monospace; font-size: 14px; border: 1px solid var(--border); }
+        
+        .tags { margin-top: 50px; padding-top: 20px; border-top: 1px solid var(--border); }
+        .tag { background: var(--code-bg); padding: 3px 8px; font-size: 12px; margin-right: 5px; color: var(--text-light); border-radius: 3px; }
+        
+        footer { text-align: center; margin-top: 40px; color: var(--text-light); font-size: 12px; padding-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="top-utils">
+            <a href="/index" style="color: var(--text-light); text-decoration: none;">← Home</a>
+            <div class="utils-right">
+                
+                <span>6 min read</span>
+                <button class="util-btn" onclick="adjustFont('sm')">A-</button>
+                <button class="util-btn" onclick="adjustFont('md')">A</button>
+                <button class="util-btn" onclick="adjustFont('lg')">A+</button>
+                <button class="util-btn" id="theme-btn">Theme</button>
+            </div>
+        </div>
+        
+        <header>
+            <h1>5 Text</h1>
+            <div class="meta">
+                Updated April 24th, 2026
+            </div>
+        </header>
+
+        <div class="content" id="main-content">
+            
+<html class="jop-noMdConv"><head class="jop-noMdConv">
+    
+    <title class="jop-noMdConv">5 Text</title>
+<pre><code>&lt;style&gt;
+/*** Start default CSS ***/
+* { margin: 0; padding: 0; font-weight: normal; }
+table, tr, td { border-color: #A3A3A3; }
+ul, ol { padding: 0; }
+.title .outline-element { display: inline; }
+.title .outline-element:nth-child(2) { margin-left: 10px !important; }
+.container-outline { font-family: Calibri, sans-serif; font-size: 6pt; }
+.ink-text, .ink-space { display: inline-block; position: relative; vertical-align: bottom; }
+.ink-text { top: 0; left: 0; }
+
+/* Icons */
+.note-tag-icon {
+    position: relative;
+    --note-tag-left: -23px;
+    --note-tag-width: 16px;
+    --note-tag-height: 16px;
+}
+.note-tag-icon.-large {
+    --note-tag-left: -25px;
+    --note-tag-width: 20px;
+    --note-tag-height: 20px;
+}
+.note-tag-icon &gt; img, .note-tag-icon &gt; svg {
+    width: var(--note-tag-width);
+    height: var(--note-tag-height);
+    left: var(--note-tag-left);
+}
+
+.tagged-list { list-style: none; padding-left: 0; }
+
+.note-tag-icon &gt; svg, .note-tag-icon &gt; img { position: absolute; }
+.icon-secondary &gt; svg, .icon-secondary &gt; img { position: absolute; fill: black; filter: drop-shadow(0 0 2px white); height: 12px; top: -1px; }
+.icon-secondary &gt; .content { position: absolute; color: black; filter: drop-shadow(0 0 2px white); font-size: 10px; color: black; top: -1px; user-select: none; }
+/*** End default CSS ***/
+
+
+&lt;/style&gt;
+</code></pre>
+</head>
+<body class="jop-noMdConv">
+<div class="title jop-noMdConv" style="left:48px;position:absolute;top:24px"><div class="container-outline jop-noMdConv" style="width:624px"><div class="outline-element jop-noMdConv" style="margin-left:0px"><span style="font-family:Calibri Light;font-size:20pt" class="jop-noMdConv">5 Text</span></div>
+</div><div class="container-outline jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><span style="color:rgb(102,102,102);font-family:Calibri;font-size:10pt" class="jop-noMdConv">Monday, September 29, 2025</span></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><span style="color:rgb(102,102,102);font-family:Calibri;font-size:10pt" class="jop-noMdConv">8:56 AM</span></div>
+</div></div><div class="container-outline jop-noMdConv" style="left:48px;position:absolute;top:115px;width:624px"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">Section 5.1: Overview of the Cardiovascular System</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">The cardiovascular system includes the heart and blood vessels.</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">Its main function is to transport oxygen, nutrients, hormones, and waste products.</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">It works closely with other systems (respiratory, digestive, urinary).</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">The lymphatic system supports circulation by returning excess fluid to the bloodstream.</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv"><br class="jop-noMdConv" /></p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">Section 5.2: Types of Blood Vessels</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">Arteries carry blood away from the heart; they have thick walls to withstand pressure.</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">Capillaries are tiny vessels where exchange of gases, nutrients, and wastes occurs.</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">Veins return blood to the heart; they have valves to prevent backflow and act as blood reservoirs.</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv"><br class="jop-noMdConv" /></p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">Section 5.3: The Heart as a Double Pump</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">The heart has four chambers: right/left atria and right/left ventricles.</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">Blood flows in a double circuit: pulmonary (to lungs) and systemic (to body).</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">Valves ensure one-way blood flow.</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">The cardiac cycle includes systole (contraction) and diastole (relaxation).</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">The SA node initiates the heartbeat; the AV node coordinates ventricular contraction.</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">ECG records electrical activity of the heart.</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv"><br class="jop-noMdConv" /></p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">Section 5.4: Blood Pressure</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">Pulse reflects heart rate.</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">Blood pressure is highest in arteries and lowest in veins.</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">Systolic pressure is during heart contraction; diastolic is during relaxation.</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">Veins rely on skeletal muscle pumps, respiratory pumps, and valves for blood return.</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv"><br class="jop-noMdConv" /></p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">Section 5.5: Two Cardiovascular Pathways</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">Pulmonary circuit: right side of heart <span style="font-family:Times New Roman" class="jop-noMdConv">→</span> lungs <span style="font-family:Times New Roman" class="jop-noMdConv">→</span> left side of heart.</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">Systemic circuit: left side of heart <span style="font-family:Times New Roman" class="jop-noMdConv">→</span> body <span style="font-family:Times New Roman" class="jop-noMdConv">→</span> right side of heart.</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">Hepatic portal system: transports nutrient-rich blood from digestive tract to liver for processing.</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv"><br class="jop-noMdConv" /></p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">Section 5.6: Exchange at the Capillaries</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">Blood pressure pushes fluid out of capillaries; osmotic pressure pulls it back in.</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">Most fluid returns to capillaries; excess is collected by the lymphatic system as lymph.</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv"><br class="jop-noMdConv" /></p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">Section 5.7: Cardiovascular Disorders</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">Hypertension (high blood pressure) and atherosclerosis (plaque buildup) are major risks.</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">Can lead to stroke, heart attack, aneurysm, and angina.</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">Treatments include medications, angioplasty, bypass surgery, stents, and artificial hearts.</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">Lifestyle changes (diet, exercise, avoiding smoking) are key to prevention.</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv"> </p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Comic Sans MS;font-size:12pt;line-height:19px" class="jop-noMdConv">Allison, Sheldon at 9/6/2025 9:01 PM</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> </p></div>
+</div>
+</body></html>
+        </div>
+
+        <div class="tags">
+            
+        </div>
+
+        <footer>
+            Shared from Joplin
+        </footer>
+    </div>
+
+    <script>
+        const btn = document.getElementById('theme-btn');
+        const updateBtnText = (t) => btn.textContent = t === 'dark' ? 'Light' : 'Dark';
+        
+        const storedTheme = localStorage.getItem('theme');
+        if (storedTheme) {
+            document.documentElement.setAttribute('data-theme', storedTheme);
+            updateBtnText(storedTheme);
+        }
+
+        btn.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            updateBtnText(theme);
+        });
+
+        function adjustFont(size) {
+            const content = document.getElementById('main-content');
+            content.classList.remove('font-sm', 'font-lg');
+            if (size === 'sm') content.classList.add('font-sm');
+            if (size === 'lg') content.classList.add('font-lg');
+        }
+    </script>
+</body>
+</html>

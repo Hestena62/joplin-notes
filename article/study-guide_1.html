@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Guide_1</title>
+    <style>
+        :root {
+            --bg: #f9f9f9;
+            --paper: #fff;
+            --text: #333;
+            --text-light: #777;
+            --border: #eee;
+            --accent: #d32f2f;
+            --code-bg: #f4f4f4;
+        }
+
+        [data-theme="dark"] {
+            --bg: #121212;
+            --paper: #1e1e1e;
+            --text: #ddd;
+            --text-light: #999;
+            --border: #333;
+            --accent: #ff5252;
+            --code-bg: #2a2a2a;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.8;
+            color: var(--text);
+            background: var(--bg);
+            margin: 0;
+            padding: 0;
+            transition: background 0.3s;
+        }
+
+        .wrapper {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 40px;
+            background: var(--paper);
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .top-utils {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            font-size: 13px;
+            color: var(--text-light);
+            font-family: sans-serif;
+        }
+
+        .utils-right { display: flex; gap: 10px; }
+        .util-btn { background: none; border: 1px solid var(--border); color: var(--text); cursor: pointer; padding: 2px 8px; font-size: 11px; }
+
+        h1 { font-size: 32px; margin-bottom: 10px; line-height: 1.2; font-weight: normal; }
+        .meta { font-size: 13px; color: var(--text-light); margin-bottom: 40px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+        
+        .content { font-size: 18px; }
+        .content.font-sm { font-size: 15px; }
+        .content.font-lg { font-size: 22px; }
+
+        .content img { max-width: 100%; height: auto; display: block; margin: 20px auto; }
+        .content pre { background: var(--code-bg); padding: 15px; overflow-x: auto; font-family: monospace; font-size: 14px; border: 1px solid var(--border); }
+        
+        .tags { margin-top: 50px; padding-top: 20px; border-top: 1px solid var(--border); }
+        .tag { background: var(--code-bg); padding: 3px 8px; font-size: 12px; margin-right: 5px; color: var(--text-light); border-radius: 3px; }
+        
+        footer { text-align: center; margin-top: 40px; color: var(--text-light); font-size: 12px; padding-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="top-utils">
+            <a href="/index" style="color: var(--text-light); text-decoration: none;">← Home</a>
+            <div class="utils-right">
+                
+                <span>26 min read</span>
+                <button class="util-btn" onclick="adjustFont('sm')">A-</button>
+                <button class="util-btn" onclick="adjustFont('md')">A</button>
+                <button class="util-btn" onclick="adjustFont('lg')">A+</button>
+                <button class="util-btn" id="theme-btn">Theme</button>
+            </div>
+        </div>
+        
+        <header>
+            <h1>Study Guide_1</h1>
+            <div class="meta">
+                Updated April 24th, 2026
+            </div>
+        </header>
+
+        <div class="content" id="main-content">
+            
+<html class="jop-noMdConv"><head class="jop-noMdConv">
+    
+    <title class="jop-noMdConv">Study Guide</title>
+<pre><code>&lt;style&gt;
+/*** Start default CSS ***/
+* { margin: 0; padding: 0; font-weight: normal; }
+table, tr, td { border-color: #A3A3A3; }
+ul, ol { padding: 0; }
+.title .outline-element { display: inline; }
+.title .outline-element:nth-child(2) { margin-left: 10px !important; }
+.container-outline { font-family: Calibri, sans-serif; font-size: 6pt; }
+.ink-text, .ink-space { display: inline-block; position: relative; vertical-align: bottom; }
+.ink-text { top: 0; left: 0; }
+
+/* Icons */
+.note-tag-icon {
+    position: relative;
+    --note-tag-left: -23px;
+    --note-tag-width: 16px;
+    --note-tag-height: 16px;
+}
+.note-tag-icon.-large {
+    --note-tag-left: -25px;
+    --note-tag-width: 20px;
+    --note-tag-height: 20px;
+}
+.note-tag-icon &gt; img, .note-tag-icon &gt; svg {
+    width: var(--note-tag-width);
+    height: var(--note-tag-height);
+    left: var(--note-tag-left);
+}
+
+.tagged-list { list-style: none; padding-left: 0; }
+
+.note-tag-icon &gt; svg, .note-tag-icon &gt; img { position: absolute; }
+.icon-secondary &gt; svg, .icon-secondary &gt; img { position: absolute; fill: black; filter: drop-shadow(0 0 2px white); height: 12px; top: -1px; }
+.icon-secondary &gt; .content { position: absolute; color: black; filter: drop-shadow(0 0 2px white); font-size: 10px; color: black; top: -1px; user-select: none; }
+/*** End default CSS ***/
+
+.list-0 li { padding-left: 10px; }
+.list-0 li::marker { font-family: Calibri; font-size: 11pt; }
+.list-1 li { padding-left: 10px; }
+.list-1 li::marker { font-family: Calibri; font-size: 11pt; }
+.list-2 li { padding-left: 10px; }
+.list-2 li::marker { font-family: Calibri; font-size: 11pt; }
+
+&lt;/style&gt;
+</code></pre>
+</head>
+<body class="jop-noMdConv">
+<div class="title jop-noMdConv" style="left:48px;position:absolute;top:24px"><div class="container-outline jop-noMdConv" style="width:624px"><div class="outline-element jop-noMdConv" style="margin-left:0px"><span style="font-family:Calibri Light;font-size:20pt" class="jop-noMdConv">Study Guide</span></div>
+</div><div class="container-outline jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><span style="color:rgb(102,102,102);font-family:Calibri;font-size:10pt" class="jop-noMdConv">Monday, November 10, 2025</span></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><span style="color:rgb(102,102,102);font-family:Calibri;font-size:10pt" class="jop-noMdConv">12:31 PM</span></div>
+</div></div><div class="container-outline jop-noMdConv" style="left:48px;position:absolute;top:115px;width:624px"><div class="outline-element jop-noMdConv" style="margin-left:0px"><h1 style="color:rgb(30,78,121);font-family:Calibri;font-size:16pt" class="jop-noMdConv">Abnormal Immune Function and Responses Study Guide</h1></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><h2 style="color:rgb(46,117,181);font-family:Calibri;font-size:14pt" class="jop-noMdConv">Quiz: Short-Answer Questions</h2></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-style:italic;padding-bottom:7px;padding-top:7px" class="jop-noMdConv">Instructions: Answer the following questions in 2-3 complete sentences based on the provided source material.</p></div><ol class="list-0 jop-noMdConv" style="left:-10px;position:relative"><li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Describe the role of Immunoglobulin E (IgE), mast cells, and histamines in an allergic reaction.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">What is anaphylactic shock, and how does an EpiPen (epinephrine) counteract its effects?</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Define autoimmune disease and provide one specific example described in the sources, including the tissue that is attacked.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Explain the primary difference between humoral immunity and cell-mediated immunity, identifying the main lymphocyte type responsible for each.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">What is the function of a cytotoxic T-cell, and how does it use perforin to destroy target cells?</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">How do antigen-presenting cells (APCs) and Helper T-cells interact, and what is the role of MHC class II markers in this process?</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Describe the basic structure of an antibody, including its four polypeptide chains and the function of its variable region.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">What is clonal selection and why is it important for mounting an effective immune response?</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Contrast the primary and secondary immune responses in terms of speed and magnitude of antibody production.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Define immunodeficiency and give an example of a disease that causes it, explaining how the immune system is compromised.</span></li>
+</ol>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;padding-bottom:7px;padding-top:7px" class="jop-noMdConv">-------------------------------------------------------------------------------- </p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><h2 style="color:rgb(46,117,181);font-family:Calibri;font-size:14pt" class="jop-noMdConv">Answer Key</h2></div><ol class="list-1 jop-noMdConv" style="left:-10px;position:relative"><li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">In an allergic reaction, B cells (as plasma cells) secrete Immunoglobulin E (IgE) antibodies in response to an allergen like pollen. Excess IgE antibodies attach to mast cells, which are common in connective tissue. When the allergen later binds to this IgE on the mast cell, it causes the cell to degranulate, releasing histamines that trigger an inflammatory response characterized by redness, itching, and swelling.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Anaphylactic shock is a severe, life-threatening allergic reaction where a widespread release of histamines causes an abnormal dilation of circulatory blood vessels. This leads to a major drop in blood pressure that can be fatal within minutes. An EpiPen contains epinephrine, which counteracts these effects by constricting blood vessels and increasing breathing, buying time for emergency medical help to arrive.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">An autoimmune disease is a condition where the body's own immune system, particularly white blood cells, mistakenly attacks its own normal, healthy tissue. One example is rheumatoid arthritis, where the immune system attacks cartilage cells in the joints, causing painful inflammation and damage. Another example is Type 1 diabetes, where the immune system destroys the insulin-producing beta cells in the pancreas.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The primary difference lies in the target and mechanism. Humoral immunity, carried out by B cells, involves the secretion of antibodies into the body's fluids (humors) to attack free, extracellular pathogens. Cell-mediated immunity, carried out primarily by T cells, targets the body's own cells that have become infected with intracellular pathogens (like viruses) or have become cancerous.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A cytotoxic T-cell (or killer T-cell) is responsible for destroying the body's own infected or cancerous cells. It identifies these target cells via their MHC class I markers displaying foreign proteins. The cytotoxic T-cell then releases a chemical called perforin, which forms pores in the target cell's membrane, causing fluids and solutes to enter, which leads to the cell lysing (bursting) and dying.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">An antigen-presenting cell (APC), such as a macrophage, engulfs a pathogen and displays fragments of it on its MHC class II markers. A Helper T-cell recognizes this complex, becomes activated, and releases chemical signals called cytokines (like interleukin-2). These signals then alert and call other lymphocytes, like B cells and cytotoxic T-cells, to the site of infection, amplifying the overall immune response.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">An antibody is a Y-shaped protein composed of four polypeptide chains: two identical large "heavy chains" and two identical smaller "light chains," held together by disulfide bridges. The ends of the Y-arms, formed by a portion of both the heavy and light chains, constitute the variable region. This region serves as the antigen-binding site, which has a specific shape to bind to a particular antigen's epitome.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Clonal selection is the process where a B or T cell with a receptor that specifically matches a foreign antigen is "selected" and stimulated to divide rapidly by mitosis. This creates a large population, or clone, of identical cells all specific to that one antigen. This is crucial for amplifying the very few initial lymphocytes that can recognize a specific pathogen into a large army of effector and memory cells capable of fighting the infection.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The primary immune response occurs upon first exposure to an antigen; it is slow, taking several days to two weeks for antibody levels to rise, during which time the individual gets sick. The secondary immune response occurs upon subsequent exposure to the same antigen; it is much faster and greater in magnitude due to the presence of memory cells, resulting in a rapid surge of antibodies that prevents sickness.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Immunodeficiency is a state where the immune system is deficient or compromised, leaving an individual vulnerable to any possible pathogen. An example is SCID (Severe Combined Immune Deficiency), a genetic disorder where the body fails to produce functioning lymphocytes. Another example is AIDS (Acquired Immune Deficiency Syndrome), which is caused by the HIV virus infecting and destroying Helper T-cells, crippling the immune system's ability to coordinate a response.</span></li>
+</ol>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;padding-bottom:7px;padding-top:7px" class="jop-noMdConv">-------------------------------------------------------------------------------- </p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><h2 style="color:rgb(46,117,181);font-family:Calibri;font-size:14pt" class="jop-noMdConv">Essay Questions</h2></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-style:italic;padding-bottom:7px;padding-top:7px" class="jop-noMdConv">Instructions: Formulate a comprehensive response to each of the following prompts, synthesizing information from across the source materials.</p></div><ol class="list-2 jop-noMdConv" style="left:-10px;position:relative"><li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Compare and contrast the roles of B cells and T cells in adaptive immunity. Discuss their origins, maturation sites, primary functions (humoral vs. cell-mediated), and how they collaborate to clear an infection.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Trace the complete sequence of events in a severe allergic reaction leading to anaphylactic shock. Begin with the initial sensitization to an allergen and detail the cellular and chemical processes involved, the resulting physiological effects, and the mechanism of emergency treatment.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Explain why the Helper T-cell is often described as the "linchpin" or "heart" of the adaptive immune system. Detail its interactions with both antigen-presenting cells and other lymphocytes (B cells and cytotoxic T-cells) and explain how its destruction by HIV leads to AIDS.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Distinguish between active and passive immunity. For each category, provide and explain one example of a naturally acquired form and one example of an artificially acquired form.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Antibodies do not typically destroy pathogens directly but render them harmless or mark them for destruction. Describe four distinct mechanisms by which antibodies achieve this, using terms like neutralization, agglutination, precipitation, and complement fixation.</span></li>
+</ol>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;padding-bottom:7px;padding-top:7px" class="jop-noMdConv">-------------------------------------------------------------------------------- </p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><h2 style="color:rgb(46,117,181);font-family:Calibri;font-size:14pt" class="jop-noMdConv">Glossary of Key Terms</h2></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><table border="1" cellpadding="0" cellspacing="0" style="border:1pt solid #A3A3A3;border-collapse:collapse" class="jop-noMdConv"><tbody class="jop-noMdConv"><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Term</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Definition</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Active Immunity</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Immunity that occurs when an individual produces their own antibodies against an antigen. It is long-lived due to the presence of memory cells. This can be acquired naturally by getting sick or artificially through vaccination.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Adaptive Immunity</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A specific immune defense that develops after exposure to an antigen, involving B cells and T cells. It is characterized by specificity, diversity, and memory.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Agglutination</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The clumping together of pathogens, such as bacteria or viruses, caused by antibodies. This makes it easier for phagocytes to engulf and destroy them.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">AIDS (Acquired Immune Deficiency Syndrome)</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The disease that results from infection by the HIV virus. It is characterized by the destruction of Helper T-cells, which severely compromises the immune system and makes the individual susceptible to opportunistic infections.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Allergen</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A substance, such as pollen or dust mites, that is normally harmless but invokes an allergic (inflammatory) reaction in some individuals.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Allergy</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">An inflammatory reaction to a harmless foreign substance (an allergen). Symptoms can range from minor (red eyes, runny nose) to major (anaphylactic shock).</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Anaphylactic Shock</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A widespread, severe, and potentially fatal allergic reaction where a massive release of histamines causes extreme dilation of blood vessels, leading to a rapid and dangerous drop in blood pressure.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Antibody (Immunoglobulin)</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A Y-shaped protein produced by plasma cells (a type of B cell) that circulates in body fluids. Antibodies specifically bind to foreign antigens to neutralize them or mark them for destruction.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Antigen</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A foreign molecule, typically a protein or polysaccharide on the surface of a pathogen or cell, that elicits an immune response. The entire pathogen itself can also be referred to as an antigen.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Antigen-Presenting Cell (APC)</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A type of white blood cell (like a macrophage) that engulfs a pathogen, breaks it down, and displays fragments of the antigen on its MHC class II markers to present to Helper T-cells.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Autoimmune Disease</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A condition where the body's immune system fails to distinguish self from non-self and attacks its own healthy cells and tissues. Examples include lupus, rheumatoid arthritis, Type 1 diabetes, and multiple sclerosis.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">B Cell (B lymphocyte)</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A type of lymphocyte responsible for humoral immunity. B cells mature in the bone marrow, and when activated, they differentiate into plasma cells that secrete antibodies and memory cells.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Cell-Mediated Immunity</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The branch of adaptive immunity that involves T cells attacking the body's own infected or cancerous cells. It is a direct cell-to-cell contact response against intracellular pathogens.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Clonal Selection</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The process by which an antigen selects a specific lymphocyte (B or T cell) that has receptors matching it, causing that lymphocyte to proliferate and form a clone of identical cells to fight the infection.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Complement System</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A group of proteins circulating in the blood plasma that can be activated by antibodies bound to a pathogen. Once activated, they can form a membrane attack complex that creates pores in the pathogen's membrane, causing it to lyse.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Cytokines</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Chemicals secreted by immune cells, such as Helper T-cells, that act as signals to call other immune cells to an area and regulate the immune response. Interleukins are a type of cytokine.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Cytotoxic T Cell (Killer T Cell)</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A type of T cell that is the key player in cell-mediated immunity. It identifies and kills the body's own cells that are infected with viruses or have become cancerous by releasing perforin.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Effector Cells</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The cells that actively carry out the immune response. In humoral immunity, these are plasma cells secreting antibodies. In cell-mediated immunity, these are cytotoxic T-cells killing infected cells.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Epinephrine (EpiPen)</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A hormone used in an emergency injection (like an EpiPen) to treat anaphylactic shock. It reverses the effects of histamine by constricting blood vessels and improving breathing.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Helper T Cell</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A type of T cell that is central to the adaptive immune response. It becomes activated by antigen-presenting cells and then secretes cytokines to stimulate and call B cells and cytotoxic T-cells to the site of infection.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Histamine</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A chemical released by mast cells and basophils during an allergic reaction. It causes vasodilation (widening of blood vessels) and increased permeability, leading to the symptoms of inflammation like swelling, redness, and itching.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">HIV (Human Immunodeficiency Virus)</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The virus that causes AIDS. It specifically infects and destroys Helper T-cells, thereby crippling the immune system's ability to coordinate a defense against pathogens.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Humoral Immunity</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The branch of adaptive immunity mediated by B cells and the antibodies they secrete into the body's fluids (humors). It primarily targets free pathogens circulating outside of cells.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Immunity</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The body's ability to resist a particular disease or pathogen, especially through the presence of memory cells and antibodies from a previous exposure or vaccination.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Immunodeficiency</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A condition where the immune system's ability to fight infectious disease is compromised or entirely absent. It can be inherited (e.g., SCID) or acquired (e.g., AIDS).</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Inflammatory Response</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A nonspecific defense mechanism triggered by tissue damage or infection. It is characterized by redness, heat, swelling, and pain, and involves chemicals like histamines that increase blood flow and allow white blood cells to reach the affected area.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Innate Immunity</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The body's nonspecific defenses that act rapidly against any pathogen without prior exposure. It includes physical barriers (skin, mucous membranes) and internal defenses (phagocytes, inflammation).</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Interferons</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Proteins secreted by virus-infected cells that can help other, non-infected cells resist viral infection.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Interleukins</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A specific type of cytokine. Interleukin-1 can stimulate a Helper T-cell to divide, while Interleukin-2 is secreted by Helper T-cells to call B cells and cytotoxic T-cells to an area.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Lymph</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The fluid inside lymphatic vessels. It originates as tissue fluid that has leaked from blood capillaries and contains water, small proteins, and potentially pathogens.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Lymph Nodes</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Small, bean-shaped structures distributed along lymphatic vessels that filter lymph. They are packed with lymphocytes and macrophages that attack and destroy pathogens present in the lymph.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Lymphatic System</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A network of vessels, nodes, and organs that runs parallel to the circulatory system. Its functions include returning excess tissue fluid to the blood and playing a key role in defending the body against pathogens.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Lymphocyte</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A type of white blood cell that is the key component of the adaptive immune system. The two main types are B cells and T cells.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Macrophage</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A large phagocytic white blood cell that engulfs and digests pathogens, cellular debris, and foreign substances. It can also function as an antigen-presenting cell.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Major Histocompatibility Complex (MHC)</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A set of proteins found on the surface of cells that act as a unique "biochemical fingerprint" for an individual, allowing the immune system to distinguish self from non-self. Class I MHC is on all nucleated body cells, while Class II MHC is on antigen-presenting cells.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Mast Cell</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A type of cell found in connective tissue that contains granules rich in histamine. In an allergic reaction, IgE antibodies bind to mast cells, causing them to degranulate and release histamine.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Memory Cells</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Long-lived B and T lymphocytes that "remember" a specific antigen. They remain in circulation after a primary infection is cleared and can mount a rapid and effective secondary immune response upon re-exposure.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Monoclonal Antibodies</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A collection of identical antibodies produced by a clone of B cells grown in a lab culture. Because they are highly specific to a single antigen, they have applications in medicine, such as cancer treatment.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Multiple Sclerosis (MS)</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">An autoimmune disease in which T cells attack the myelin sheath that insulates neurons, leading to chronic neurological disease.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Neutralization</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A mechanism by which antibodies block the activity of an antigen. For example, an antibody can bind to a protein that a virus uses to infect a host cell, thereby preventing infection.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Passive Immunity</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Short-term immunity resulting from the acquisition of antibodies from another source, rather than producing them oneself. It can be acquired naturally (mother to baby via breast milk) or artificially (an injection of antibodies).</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Pathogen</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A disease-causing agent, such as a bacterium, virus, fungus, or protozoan.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Phagocytosis</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The process by which a cell, such as a macrophage or neutrophil, engulfs a large particle, such as a bacterium or cellular debris, into a vesicle to be digested internally.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Plasma Cell</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A fully differentiated B cell that is a highly effective "antibody factory." Plasma cells are enlarged and produce and secrete large quantities of antibodies into the blood and lymph.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Primary Immune Response</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The immune system's response to its first encounter with a specific antigen. It is relatively slow, taking several days to develop, during which the individual may experience symptoms of illness.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Rheumatoid Arthritis</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">An autoimmune disease characterized by a painful inflammatory response where the immune system attacks the cartilage in joints.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">SCID (Severe Combined Immune Deficiency)</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A group of rare, inherited disorders that cause major abnormalities of the immune system. Individuals lack functioning T and B lymphocytes, making them extremely vulnerable to infectious diseases.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Secondary Immune Response</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The immune system's rapid and enhanced response to a subsequent encounter with a specific antigen. It is mediated by memory cells and is so effective that it typically prevents illness.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Suppressor T Cell</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A type of T lymphocyte that produces suppressor proteins to inhibit the activity of cytotoxic T-cells and plasma cells, thereby calming the immune response after an infection has been cleared.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">T Cell (T lymphocyte)</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A type of lymphocyte responsible for cell-mediated immunity. T cells originate in the bone marrow but mature in the thymus gland. The main types are cytotoxic T-cells and helper T-cells.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Thymus</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A lymphatic organ located above the heart where T cells mature and are "tested" to ensure they are competent and do not attack the body's own cells.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Vaccination</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The administration of a vaccine (containing weakened or killed pathogens, or their surface proteins) to stimulate a primary immune response and produce memory cells, thereby providing artificially acquired active immunity against a disease.</p></div>
+</td></tr></tbody></table></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><h4 style="color:rgb(47,84,150);font-family:Calibri;font-size:12pt;font-style:italic" class="jop-noMdConv">Classes of Antibodies</h4></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><table border="1" cellpadding="0" cellspacing="0" style="border:1pt solid #A3A3A3;border-collapse:collapse" class="jop-noMdConv"><tbody class="jop-noMdConv"><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Class</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Structure</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Presence &amp; Function</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">IgG</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Monomer</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Main antibody type in circulation; crosses the placenta from mother to fetus; binds to pathogens, activates complement, and enhances phagocytosis.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">IgM</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Pentamer</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Found in circulation; largest antibody; first antibody to appear in an infection; activates complement and clumps cells.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">IgA</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Dimer</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Main antibody type in secretions such as saliva, tears, and milk; prevents pathogens from attaching to epithelial cells in digestive and respiratory tracts.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">IgD</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Monomer</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Found on the surface of immature B cells; signifies the readiness of the B cell.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">IgE</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Monomer</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Found as antigen receptors on mast cells in tissues; responsible for immediate allergic responses and protection against certain parasitic worms.</p></div>
+</td></tr></tbody></table></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> </p></div>
+</div>
+</body></html>
+        </div>
+
+        <div class="tags">
+            
+        </div>
+
+        <footer>
+            Shared from Joplin
+        </footer>
+    </div>
+
+    <script>
+        const btn = document.getElementById('theme-btn');
+        const updateBtnText = (t) => btn.textContent = t === 'dark' ? 'Light' : 'Dark';
+        
+        const storedTheme = localStorage.getItem('theme');
+        if (storedTheme) {
+            document.documentElement.setAttribute('data-theme', storedTheme);
+            updateBtnText(storedTheme);
+        }
+
+        btn.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            updateBtnText(theme);
+        });
+
+        function adjustFont(size) {
+            const content = document.getElementById('main-content');
+            content.classList.remove('font-sm', 'font-lg');
+            if (size === 'sm') content.classList.add('font-sm');
+            if (size === 'lg') content.classList.add('font-lg');
+        }
+    </script>
+</body>
+</html>

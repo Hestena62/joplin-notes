@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Briefing Document</title>
+    <style>
+        :root {
+            --bg: #f9f9f9;
+            --paper: #fff;
+            --text: #333;
+            --text-light: #777;
+            --border: #eee;
+            --accent: #d32f2f;
+            --code-bg: #f4f4f4;
+        }
+
+        [data-theme="dark"] {
+            --bg: #121212;
+            --paper: #1e1e1e;
+            --text: #ddd;
+            --text-light: #999;
+            --border: #333;
+            --accent: #ff5252;
+            --code-bg: #2a2a2a;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.8;
+            color: var(--text);
+            background: var(--bg);
+            margin: 0;
+            padding: 0;
+            transition: background 0.3s;
+        }
+
+        .wrapper {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 40px;
+            background: var(--paper);
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .top-utils {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            font-size: 13px;
+            color: var(--text-light);
+            font-family: sans-serif;
+        }
+
+        .utils-right { display: flex; gap: 10px; }
+        .util-btn { background: none; border: 1px solid var(--border); color: var(--text); cursor: pointer; padding: 2px 8px; font-size: 11px; }
+
+        h1 { font-size: 32px; margin-bottom: 10px; line-height: 1.2; font-weight: normal; }
+        .meta { font-size: 13px; color: var(--text-light); margin-bottom: 40px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+        
+        .content { font-size: 18px; }
+        .content.font-sm { font-size: 15px; }
+        .content.font-lg { font-size: 22px; }
+
+        .content img { max-width: 100%; height: auto; display: block; margin: 20px auto; }
+        .content pre { background: var(--code-bg); padding: 15px; overflow-x: auto; font-family: monospace; font-size: 14px; border: 1px solid var(--border); }
+        
+        .tags { margin-top: 50px; padding-top: 20px; border-top: 1px solid var(--border); }
+        .tag { background: var(--code-bg); padding: 3px 8px; font-size: 12px; margin-right: 5px; color: var(--text-light); border-radius: 3px; }
+        
+        footer { text-align: center; margin-top: 40px; color: var(--text-light); font-size: 12px; padding-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="top-utils">
+            <a href="/index" style="color: var(--text-light); text-decoration: none;">← Home</a>
+            <div class="utils-right">
+                
+                <span>23 min read</span>
+                <button class="util-btn" onclick="adjustFont('sm')">A-</button>
+                <button class="util-btn" onclick="adjustFont('md')">A</button>
+                <button class="util-btn" onclick="adjustFont('lg')">A+</button>
+                <button class="util-btn" id="theme-btn">Theme</button>
+            </div>
+        </div>
+        
+        <header>
+            <h1>Briefing Document</h1>
+            <div class="meta">
+                Updated April 24th, 2026
+            </div>
+        </header>
+
+        <div class="content" id="main-content">
+            
+<html class="jop-noMdConv"><head class="jop-noMdConv">
+    
+    <title class="jop-noMdConv">Briefing Document</title>
+<pre><code>&lt;style&gt;
+/*** Start default CSS ***/
+* { margin: 0; padding: 0; font-weight: normal; }
+table, tr, td { border-color: #A3A3A3; }
+ul, ol { padding: 0; }
+.title .outline-element { display: inline; }
+.title .outline-element:nth-child(2) { margin-left: 10px !important; }
+.container-outline { font-family: Calibri, sans-serif; font-size: 6pt; }
+.ink-text, .ink-space { display: inline-block; position: relative; vertical-align: bottom; }
+.ink-text { top: 0; left: 0; }
+
+/* Icons */
+.note-tag-icon {
+    position: relative;
+    --note-tag-left: -23px;
+    --note-tag-width: 16px;
+    --note-tag-height: 16px;
+}
+.note-tag-icon.-large {
+    --note-tag-left: -25px;
+    --note-tag-width: 20px;
+    --note-tag-height: 20px;
+}
+.note-tag-icon &gt; img, .note-tag-icon &gt; svg {
+    width: var(--note-tag-width);
+    height: var(--note-tag-height);
+    left: var(--note-tag-left);
+}
+
+.tagged-list { list-style: none; padding-left: 0; }
+
+.note-tag-icon &gt; svg, .note-tag-icon &gt; img { position: absolute; }
+.icon-secondary &gt; svg, .icon-secondary &gt; img { position: absolute; fill: black; filter: drop-shadow(0 0 2px white); height: 12px; top: -1px; }
+.icon-secondary &gt; .content { position: absolute; color: black; filter: drop-shadow(0 0 2px white); font-size: 10px; color: black; top: -1px; user-select: none; }
+/*** End default CSS ***/
+
+.list-0 li { padding-left: 10px; }
+.list-0 li::marker { content: '•'; font-family: Calibri; font-size: 11pt; }
+.list-1 li { padding-left: 10px; }
+.list-1 li::marker { font-family: Calibri; font-size: 11pt; }
+.list-2 li { padding-left: 10px; }
+.list-2 li::marker { content: '•'; font-family: Calibri; font-size: 11pt; }
+.list-3 li { padding-left: 10px; }
+.list-3 li::marker { content: '•'; font-family: Calibri; font-size: 11pt; }
+.list-4 li { padding-left: 10px; }
+.list-4 li::marker { content: '•'; font-family: Calibri; font-size: 11pt; }
+.list-5 li { padding-left: 10px; }
+.list-5 li::marker { font-family: Calibri; font-size: 11pt; }
+.list-6 li { padding-left: 10px; }
+.list-6 li::marker { content: '•'; font-family: Calibri; font-size: 11pt; }
+.list-7 li { padding-left: 10px; }
+.list-7 li::marker { content: '•'; font-family: Calibri; font-size: 11pt; }
+.list-8 li { padding-left: 10px; }
+.list-8 li::marker { content: '•'; font-family: Calibri; font-size: 11pt; }
+.list-9 li { padding-left: 10px; }
+.list-9 li::marker { content: '•'; font-family: Calibri; font-size: 11pt; }
+
+&lt;/style&gt;
+</code></pre>
+</head>
+<body class="jop-noMdConv">
+<div class="title jop-noMdConv" style="left:48px;position:absolute;top:24px"><div class="container-outline jop-noMdConv" style="width:624px"><div class="outline-element jop-noMdConv" style="margin-left:0px"><span style="font-family:Calibri Light;font-size:20pt" class="jop-noMdConv">Briefing Document</span></div>
+</div><div class="container-outline jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><span style="color:rgb(102,102,102);font-family:Calibri;font-size:10pt" class="jop-noMdConv">Wednesday, October 22, 2025</span></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><span style="color:rgb(102,102,102);font-family:Calibri;font-size:10pt" class="jop-noMdConv">6:02 PM</span></div>
+</div></div><div class="container-outline jop-noMdConv" style="left:48px;position:absolute;top:115px;width:624px"><div class="outline-element jop-noMdConv" style="margin-left:0px"><h1 style="color:rgb(30,78,121);font-family:Calibri;font-size:16pt" class="jop-noMdConv">Briefing Document: The Composition, Function, and Systems of Human Blood</h1></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><h2 style="color:rgb(46,117,181);font-family:Calibri;font-size:14pt" class="jop-noMdConv">Executive Summary</h2></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;padding-bottom:7px;padding-top:7px" class="jop-noMdConv">This document provides a comprehensive analysis of human blood, a vital connective tissue responsible for transport, defense, and regulation within the body. Blood consists of two primary components: plasma, the liquid matrix, and formed elements, which include erythrocytes (red blood cells), leukocytes (white blood cells), and platelets. Plasma, which constitutes approximately 55% of blood volume, is primarily water but is rich in essential proteins—albumin, globulins, and fibrinogen—that regulate osmotic pressure, transport lipids, facilitate immunity, and enable clotting. The formed elements comprise the remaining 45%, a value known as the hematocrit.</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;padding-bottom:7px;padding-top:7px" class="jop-noMdConv">Erythrocytes are the most numerous cells, specialized for oxygen transport via hemoglobin. Their production is regulated by the hormone erythropoietin from the kidneys. Leukocytes are the cornerstone of the immune system, with five distinct types (neutrophils, eosinophils, basophils, lymphocytes, and monocytes) that specialize in defending against pathogens through processes like phagocytosis and antibody production. Platelets are cellular fragments critical for hemostasis, the multi-phase process of stopping blood flow after an injury, which involves vascular spasm, the formation of a platelet plug, and a complex coagulation cascade that culminates in a stable fibrin clot.</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;padding-bottom:7px;padding-top:7px" class="jop-noMdConv">Blood typing, based on the ABO and Rh antigen systems on the surface of erythrocytes, is crucial for safe blood transfusions. The presence or absence of these antigens determines a person's blood type and the corresponding antibodies in their plasma, defining compatibility between donors and recipients. Understanding these interconnected systems is fundamental to both physiology and clinical medicine.</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;padding-bottom:7px;padding-top:7px" class="jop-noMdConv">-------------------------------------------------------------------------------- </p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><h2 style="color:rgb(46,117,181);font-family:Calibri;font-size:14pt" class="jop-noMdConv">I. Overview of Blood Composition</h2></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;padding-bottom:7px;padding-top:7px" class="jop-noMdConv">Blood is classified as a type of connective tissue, unique in that its cells are suspended in a liquid extracellular matrix known as plasma. When whole blood is separated in a centrifuge, it visibly stratifies into three distinct layers based on density.</p></div><ul class="list-0 jop-noMdConv" style="left:-10px;position:relative"><li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Plasma:</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> The uppermost, straw-colored liquid layer, constituting about 55% of the total blood volume.</span></span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Buffy Coat:</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> A thin, whitish layer found between the plasma and red blood cells. It contains leukocytes and platelets and makes up about 1% of the total volume.</span></span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Erythrocytes (Red Blood Cells):</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> The densest component, settling at the bottom. This layer represents the </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">hematocrit</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">, or the percentage of blood volume occupied by red blood cells, which is normally around 45%.</span></span></li>
+</ul>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><h3 style="color:rgb(31,55,99);font-family:Calibri;font-size:12pt" class="jop-noMdConv">Key Functions of Blood</h3></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;padding-bottom:7px;padding-top:7px" class="jop-noMdConv">The functions of blood fall into three primary categories:</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><table border="1" cellpadding="0" cellspacing="0" style="border:1pt solid #A3A3A3;border-collapse:collapse" class="jop-noMdConv"><tbody class="jop-noMdConv"><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Category</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Description of Functions</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Transport</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Delivers oxygen from the lungs and nutrients from the digestive tract to all body cells. Transports metabolic waste products from cells to elimination sites (lungs and kidneys). Carries hormones from endocrine organs to their target tissues.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Defense</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Protects against blood loss through clotting mechanisms involving platelets and plasma proteins. Defends against foreign invaders like bacteria and viruses, with white blood cells serving as the primary agents of the immune system.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Regulation</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Maintains appropriate body temperature by absorbing and distributing heat. Regulates normal pH in body tissues using buffer systems. Maintains adequate fluid volume and osmotic balance in the circulatory system.</p></div>
+</td></tr></tbody></table></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><h2 style="color:rgb(46,117,181);font-family:Calibri;font-size:14pt" class="jop-noMdConv">II. Plasma: The Liquid Matrix</h2></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;padding-bottom:7px;padding-top:7px" class="jop-noMdConv">Plasma is the liquid portion of blood, a fluid connective tissue that is approximately 90-91% water. The remaining 9-10% consists of a multitude of dissolved substances, with plasma proteins being the most abundant.</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><h3 style="color:rgb(31,55,99);font-family:Calibri;font-size:12pt" class="jop-noMdConv">Plasma Proteins and Their Roles</h3></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;padding-bottom:7px;padding-top:7px" class="jop-noMdConv">Plasma proteins, which are not typically used for energy, are primarily produced by the liver (with the exception of gamma globulins) and have diverse, critical functions.</p></div><ol class="list-1 jop-noMdConv" style="left:-10px;position:relative"><li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Albumin:</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> The most abundant plasma protein, albumin is crucial for maintaining the osmotic balance (osmotic pressure) between the blood and tissue fluids. This regulation is essential for managing blood volume and blood pressure.</span></span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Globulins:</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> This is a diverse group of proteins categorized into three main types:</span></span><ul class="list-2 jop-noMdConv" style="left:-10px;position:relative"><li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Alpha and Beta Globulins:</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> Produced by the liver, these proteins act as transporters for lipids and other substances. Since lipids like cholesterol and triglycerides are hydrophobic and cannot travel easily in water-based plasma, they are enveloped by these proteins to form complexes called </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">lipoproteins</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">. Examples include High-Density Lipoproteins (HDL), Low-Density Lipoproteins (LDL), and Very-Low-Density Lipoproteins (VLDL). High levels of LDL are associated with arterial disease.</span></span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Gamma Globulins:</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> These proteins are also known as </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">antibodies</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> or </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">immunoglobulins</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">. Unlike other plasma proteins, they are produced by B lymphocytes (a type of white blood cell) and are essential components of the immune system, defending the body against pathogens.</span></span></li>
+</ul></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Fibrinogen:</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> Produced by the liver, fibrinogen is a soluble protein that is a key precursor in the blood clotting process. When a blood vessel is damaged, it is converted into an insoluble protein called </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">fibrin</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">, which forms the structural mesh of a blood clot.</span></span></li>
+</ol>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><h3 style="color:rgb(31,55,99);font-family:Calibri;font-size:12pt" class="jop-noMdConv">Other Transported Substances in Plasma</h3></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;padding-bottom:7px;padding-top:7px" class="jop-noMdConv">Beyond proteins, plasma carries a wide array of other essential and waste substances:</p></div><ul class="list-3 jop-noMdConv" style="left:-10px;position:relative"><li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Nutrients:</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> Products of digestion, such as glucose, amino acids, nucleotides, and lipids, are transported throughout the body.</span></span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Gases:</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> While red blood cells carry most oxygen, plasma carries a small amount of dissolved oxygen and a significant portion of carbon dioxide, primarily in the form of bicarbonate ions (HCO₃⁻).</span></span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Non-protein Nitrogenous Substances:</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> These are metabolic waste products, including urea and uric acid, which are transported from cells to the kidneys for filtration and excretion.</span></span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Electrolytes:</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> These are salts (ions like sodium, potassium, and calcium) that are vital for maintaining blood pH, osmotic balance, neuron function, and muscle contraction.</span></span></li>
+</ul>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><h2 style="color:rgb(46,117,181);font-family:Calibri;font-size:14pt" class="jop-noMdConv">III. The Formed Elements: Cellular Components</h2></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;padding-bottom:7px;padding-top:7px" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The formed elements are the cellular and cell-fragment components of blood, all of which originate from a common stem cell, the </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">hemocytoblast</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">, in the red bone marrow.</span></p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><h3 style="color:rgb(31,55,99);font-family:Calibri;font-size:12pt" class="jop-noMdConv">A. Erythrocytes (Red Blood Cells)</h3></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;padding-bottom:7px;padding-top:7px" class="jop-noMdConv">Erythrocytes (RBCs) are the most numerous blood cells, with an average of 5 to 6 million cells per cubic millimeter in males.</p></div><ul class="list-4 jop-noMdConv" style="left:-10px;position:relative"><li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Structure and Function:</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> RBCs are small, biconcave discs. This shape maximizes the surface area for gas diffusion. Critically, mature RBCs are anucleated (lack a nucleus) and have few organelles. This allows them to carry more hemoglobin—approximately 300 million molecules per cell—and provides the flexibility needed to squeeze through narrow capillaries. Their primary function is transporting oxygen, which binds to the iron within the </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">hemoglobin</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> molecule. Oxygenated hemoglobin (oxyhemoglobin) gives blood its bright red color.</span></span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Life Cycle and Regulation:</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> RBCs have a lifespan of about 120 days (or 3-4 months) due to the wear and tear of circulating through capillaries without a nucleus to direct repairs. Their production, known as </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">erythropoiesis</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">, is regulated by the hormone </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">erythropoietin (EPO)</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">, which is released by the kidneys in response to low blood oxygen levels. Old or damaged RBCs are removed from circulation by phagocytic white blood cells in the liver and spleen. Hemoglobin is broken down: the globin protein is recycled into amino acids, and the iron-containing heme group is converted into a pigment called </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">bilirubin</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">, which the liver processes and excretes. A buildup of bilirubin can cause jaundice.</span></span></li>
+</ul>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><h3 style="color:rgb(31,55,99);font-family:Calibri;font-size:12pt" class="jop-noMdConv">B. Leukocytes (White Blood Cells)</h3></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;padding-bottom:7px;padding-top:7px" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Leukocytes (WBCs) are complete cells with a nucleus and organelles, functioning primarily in immune defense. They make up only about 1% of blood volume but are critical for protecting the body. Unlike RBCs, they can move autonomously and leave the bloodstream to enter tissues to fight infections, a process guided by chemical signals (</span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">chemotaxis</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">). There are five types of leukocytes, categorized as granulocytes or agranulocytes.</span></p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><h4 style="color:rgb(47,84,150);font-family:Calibri;font-size:12pt;font-style:italic" class="jop-noMdConv">1. Granulocytes (Contain cytoplasmic granules)</h4></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><table border="1" cellpadding="0" cellspacing="0" style="border:1pt solid #A3A3A3;border-collapse:collapse" class="jop-noMdConv"><tbody class="jop-noMdConv"><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Type</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Abundance</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Key Features &amp; Functions</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Neutrophil</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Most abundant (50-70%)</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Multi-lobed, sausage-shaped nucleus. Highly phagocytic, serving as the first responders to bacterial infections.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Eosinophil</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Rare (~2%)</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Bilobed nucleus, granules stain bright red. Combat parasitic worm infections and are involved in allergic reactions.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Basophil</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Rarest (~1%)</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Granules stain dark blue, often obscuring the nucleus. Release histamine (promotes inflammation) and heparin (an anticoagulant) at sites of tissue damage.</p></div>
+</td></tr></tbody></table></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><h4 style="color:rgb(47,84,150);font-family:Calibri;font-size:12pt;font-style:italic" class="jop-noMdConv">2. Agranulocytes (Lack visible cytoplasmic granules)</h4></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><table border="1" cellpadding="0" cellspacing="0" style="border:1pt solid #A3A3A3;border-collapse:collapse" class="jop-noMdConv"><tbody class="jop-noMdConv"><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Type</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Abundance</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Key Features &amp; Functions</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Lymphocyte</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Second most abundant</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Large, round nucleus dominates the cell. The cornerstone of specific immunity. B lymphocytes produce antibodies, providing long-term immunity.</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Monocyte</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Largest WBC</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv"><span style="font-weight:bold" class="jop-noMdConv">Kidney-shaped nucleus. Leave the bloodstream to become powerful phagocytes called </span>macrophages ("big eaters") that engulf pathogens and cellular debris.</p></div>
+</td></tr></tbody></table></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><h3 style="color:rgb(31,55,99);font-family:Calibri;font-size:12pt" class="jop-noMdConv">C. Platelets (Thrombocytes)</h3></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;padding-bottom:7px;padding-top:7px" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Platelets are not true cells but are fragments of cytoplasm that bud off from extremely large cells in the red bone marrow called </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">megakaryocytes</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">. With a normal count between 130,000 and 360,000 per microliter, their primary function is to initiate the process of hemostasis.</span></p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><h2 style="color:rgb(46,117,181);font-family:Calibri;font-size:14pt" class="jop-noMdConv">IV. Hemostasis: The Process of Blood Clotting</h2></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;padding-bottom:7px;padding-top:7px" class="jop-noMdConv">Hemostasis is the rapid, localized, and carefully controlled process of stopping bleeding. It occurs in three sequential phases.</p></div><ol class="list-5 jop-noMdConv" style="left:-10px;position:relative"><li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Phase 1: Vascular Spasm (Vasoconstriction):</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> Immediately following injury to a blood vessel, the surrounding smooth muscle contracts, causing the vessel to constrict. This vasospasm reduces blood flow and minimizes blood loss, lasting for a few minutes.</span></span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Phase 2: Platelet Plug Formation:</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> When the vessel is damaged, underlying </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">collagen fibers</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> are exposed. Circulating platelets adhere to these fibers and become "sticky," releasing chemicals that attract more platelets to the site. This aggregation forms a temporary platelet plug, which is effective in sealing small breaks.</span></span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Phase 3: Coagulation (Blood Clotting):</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> This is the most effective phase and involves a complex cascade of enzymatic reactions using clotting factors.</span></span><ul class="list-6 jop-noMdConv" style="left:-10px;position:relative"><li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Damaged tissues release chemicals (like thromboplastin) that lead to the formation of </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">prothrombin activator</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">.</span></span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">In the presence of calcium ions (Ca²⁺), prothrombin activator converts the plasma protein </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">prothrombin</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> into the active enzyme </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">thrombin</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">.</span></span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Thrombin then catalyzes the conversion of the soluble plasma protein </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">fibrinogen</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> into long, insoluble threads of </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">fibrin</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">.</span></span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">These fibrin threads form a mesh that traps red blood cells and platelets, creating a stable blood clot that seals the vessel until it can be repaired.</span></li>
+</ul></li>
+</ol>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;padding-bottom:7px;padding-top:7px" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">An abnormal clot that forms in an unbroken blood vessel is called a </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">thrombus</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">. If this clot dislodges and travels through the bloodstream, it is called an </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">embolus</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">, which can lodge in a critical vessel and cause a stroke or heart attack.</span></p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><h2 style="color:rgb(46,117,181);font-family:Calibri;font-size:14pt" class="jop-noMdConv">V. Human Blood Groups and Transfusion</h2></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;padding-bottom:7px;padding-top:7px" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">The surfaces of red blood cells are marked by genetically determined proteins and glycoproteins called </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">antigens</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">. These antigens provoke an immune response if they are foreign to the body. The presence or absence of specific antigens is the basis for blood typing.</span></p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><h3 style="color:rgb(31,55,99);font-family:Calibri;font-size:12pt" class="jop-noMdConv">A. The ABO System</h3></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;padding-bottom:7px;padding-top:7px" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">This system is based on the presence of two antigens: A and B. A person's plasma contains pre-formed antibodies (</span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">agglutinins</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">) against the antigens that are </span><span style="font-family:Calibri;font-size:11pt;font-style:italic" class="jop-noMdConv">absent</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> on their own RBCs.</span></p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><table border="1" cellpadding="0" cellspacing="0" style="border:1pt solid #A3A3A3;border-collapse:collapse" class="jop-noMdConv"><tbody class="jop-noMdConv"><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Blood Type</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Antigens on RBC</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Antibodies in Plasma</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Can Donate To</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Can Receive From</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">A</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Anti-B</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A, AB</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A, O</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">B</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">B</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Anti-A</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">B, AB</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">B, O</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">AB</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A and B</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">None</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">AB</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A, B, AB, O</p></div>
+</td></tr><tr class="jop-noMdConv"><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">O</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">None</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Anti-A and Anti-B</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A, B, AB, O</p></div>
+</td><td style="min-width:48px;padding:2pt;vertical-align:top" class="jop-noMdConv"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">O</p></div>
+</td></tr></tbody></table></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;padding-bottom:7px;padding-top:7px" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">If incompatible blood types are mixed, the recipient's antibodies bind to the donor's antigens, causing the red blood cells to clump together, a process called </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">agglutination</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">. This can be fatal.</span></p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><h3 style="color:rgb(31,55,99);font-family:Calibri;font-size:12pt" class="jop-noMdConv">B. The Rh System</h3></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;padding-bottom:7px;padding-top:7px" class="jop-noMdConv">The Rh blood group is based on the presence or absence of the Rh antigen (also called the D antigen), first discovered in Rhesus monkeys.</p></div><ul class="list-7 jop-noMdConv" style="left:-10px;position:relative"><li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Rh-positive (Rh+):</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> The Rh antigen is present on the RBCs.</span></span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Rh-negative (Rh-):</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> The Rh antigen is absent. Unlike the ABO system, anti-Rh antibodies are not pre-formed in Rh- individuals; they are only produced after exposure to Rh+ blood.</span></span></li>
+</ul>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><h3 style="color:rgb(31,55,99);font-family:Calibri;font-size:12pt" class="jop-noMdConv">C. Transfusion Compatibility</h3></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;padding-bottom:7px;padding-top:7px" class="jop-noMdConv">Combining both systems determines full compatibility:</p></div><ul class="list-8 jop-noMdConv" style="left:-10px;position:relative"><li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Universal Donor:</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> Type </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">O-negative</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> blood lacks all A, B, and Rh antigens, making it the safest to give to any recipient in an emergency.</span></span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Universal Recipient:</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> Type </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">AB-positive</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> blood has all A, B, and Rh antigens, meaning the recipient's plasma has no antibodies to attack any donor blood type.</span></span></li>
+</ul>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><h3 style="color:rgb(31,55,99);font-family:Calibri;font-size:12pt" class="jop-noMdConv">D. Clinical Considerations: Erythroblastosis Fetalis</h3></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;padding-bottom:7px;padding-top:7px" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">This condition, also known as hemolytic disease of the newborn, can occur when an </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Rh-negative mother</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> carries an </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">Rh-positive fetus</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">. During childbirth, fetal Rh+ blood can enter the mother's circulation, causing her to produce anti-Rh antibodies. If she becomes pregnant with a second Rh+ fetus, these maternal antibodies can cross the placenta and attack the fetus's red blood cells, causing severe anemia and potential harm. This is now preventable with an injection (RhoGAM) that prevents the mother from forming the antibodies.</span></p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><h3 style="color:rgb(31,55,99);font-family:Calibri;font-size:12pt" class="jop-noMdConv">E. Genetics of Blood Types</h3></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;padding-bottom:7px;padding-top:7px" class="jop-noMdConv">The ABO blood types are determined by a single gene with three alleles: Iᴬ (A), Iᴮ (B), and i (O).</p></div><ul class="list-9 jop-noMdConv" style="left:-10px;position:relative"><li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Iᴬ and Iᴮ are </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">codominant</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">, meaning if both are present (genotype IᴬIᴮ), the person has type AB blood.</span></span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">Both Iᴬ and Iᴮ are dominant over the </span><span style="font-family:Calibri;font-size:11pt;font-weight:bold" class="jop-noMdConv">recessive</span><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> i allele.</span></span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt" class="jop-noMdConv">A person with type O blood must have the homozygous recessive genotype (ii).</span></li>
+</ul>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt" class="jop-noMdConv"> </p></div>
+</div>
+</body></html>
+        </div>
+
+        <div class="tags">
+            
+        </div>
+
+        <footer>
+            Shared from Joplin
+        </footer>
+    </div>
+
+    <script>
+        const btn = document.getElementById('theme-btn');
+        const updateBtnText = (t) => btn.textContent = t === 'dark' ? 'Light' : 'Dark';
+        
+        const storedTheme = localStorage.getItem('theme');
+        if (storedTheme) {
+            document.documentElement.setAttribute('data-theme', storedTheme);
+            updateBtnText(storedTheme);
+        }
+
+        btn.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            updateBtnText(theme);
+        });
+
+        function adjustFont(size) {
+            const content = document.getElementById('main-content');
+            content.classList.remove('font-sm', 'font-lg');
+            if (size === 'sm') content.classList.add('font-sm');
+            if (size === 'lg') content.classList.add('font-lg');
+        }
+    </script>
+</body>
+</html>

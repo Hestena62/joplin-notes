@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human BIO Textbook</title>
+    <style>
+        :root {
+            --bg: #f9f9f9;
+            --paper: #fff;
+            --text: #333;
+            --text-light: #777;
+            --border: #eee;
+            --accent: #d32f2f;
+            --code-bg: #f4f4f4;
+        }
+
+        [data-theme="dark"] {
+            --bg: #121212;
+            --paper: #1e1e1e;
+            --text: #ddd;
+            --text-light: #999;
+            --border: #333;
+            --accent: #ff5252;
+            --code-bg: #2a2a2a;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.8;
+            color: var(--text);
+            background: var(--bg);
+            margin: 0;
+            padding: 0;
+            transition: background 0.3s;
+        }
+
+        .wrapper {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 40px;
+            background: var(--paper);
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .top-utils {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            font-size: 13px;
+            color: var(--text-light);
+            font-family: sans-serif;
+        }
+
+        .utils-right { display: flex; gap: 10px; }
+        .util-btn { background: none; border: 1px solid var(--border); color: var(--text); cursor: pointer; padding: 2px 8px; font-size: 11px; }
+
+        h1 { font-size: 32px; margin-bottom: 10px; line-height: 1.2; font-weight: normal; }
+        .meta { font-size: 13px; color: var(--text-light); margin-bottom: 40px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+        
+        .content { font-size: 18px; }
+        .content.font-sm { font-size: 15px; }
+        .content.font-lg { font-size: 22px; }
+
+        .content img { max-width: 100%; height: auto; display: block; margin: 20px auto; }
+        .content pre { background: var(--code-bg); padding: 15px; overflow-x: auto; font-family: monospace; font-size: 14px; border: 1px solid var(--border); }
+        
+        .tags { margin-top: 50px; padding-top: 20px; border-top: 1px solid var(--border); }
+        .tag { background: var(--code-bg); padding: 3px 8px; font-size: 12px; margin-right: 5px; color: var(--text-light); border-radius: 3px; }
+        
+        footer { text-align: center; margin-top: 40px; color: var(--text-light); font-size: 12px; padding-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="top-utils">
+            <a href="/index" style="color: var(--text-light); text-decoration: none;">← Home</a>
+            <div class="utils-right">
+                
+                <span>10 min read</span>
+                <button class="util-btn" onclick="adjustFont('sm')">A-</button>
+                <button class="util-btn" onclick="adjustFont('md')">A</button>
+                <button class="util-btn" onclick="adjustFont('lg')">A+</button>
+                <button class="util-btn" id="theme-btn">Theme</button>
+            </div>
+        </div>
+        
+        <header>
+            <h1>Human BIO Textbook</h1>
+            <div class="meta">
+                Updated April 24th, 2026
+            </div>
+        </header>
+
+        <div class="content" id="main-content">
+            
+<html class="jop-noMdConv"><head class="jop-noMdConv">
+    
+    <title class="jop-noMdConv">Human BIO Textbook</title>
+<pre><code>&lt;style&gt;
+/*** Start default CSS ***/
+* { margin: 0; padding: 0; font-weight: normal; }
+table, tr, td { border-color: #A3A3A3; }
+ul, ol { padding: 0; }
+.title .outline-element { display: inline; }
+.title .outline-element:nth-child(2) { margin-left: 10px !important; }
+.container-outline { font-family: Calibri, sans-serif; font-size: 6pt; }
+.ink-text, .ink-space { display: inline-block; position: relative; vertical-align: bottom; }
+.ink-text { top: 0; left: 0; }
+
+/* Icons */
+.note-tag-icon {
+    position: relative;
+    --note-tag-left: -23px;
+    --note-tag-width: 16px;
+    --note-tag-height: 16px;
+}
+.note-tag-icon.-large {
+    --note-tag-left: -25px;
+    --note-tag-width: 20px;
+    --note-tag-height: 20px;
+}
+.note-tag-icon &gt; img, .note-tag-icon &gt; svg {
+    width: var(--note-tag-width);
+    height: var(--note-tag-height);
+    left: var(--note-tag-left);
+}
+
+.tagged-list { list-style: none; padding-left: 0; }
+
+.note-tag-icon &gt; svg, .note-tag-icon &gt; img { position: absolute; }
+.icon-secondary &gt; svg, .icon-secondary &gt; img { position: absolute; fill: black; filter: drop-shadow(0 0 2px white); height: 12px; top: -1px; }
+.icon-secondary &gt; .content { position: absolute; color: black; filter: drop-shadow(0 0 2px white); font-size: 10px; color: black; top: -1px; user-select: none; }
+/*** End default CSS ***/
+
+.list-0 li { padding-left: 10px; }
+.list-0 li::marker { content: '•'; font-family: Calibri; font-size: 11pt; }
+.list-1 li { padding-left: 10px; }
+.list-1 li::marker { content: '○'; font-family: Courier New; font-size: 11pt; }
+.list-10 li { padding-left: 10px; }
+.list-10 li::marker { content: '•'; font-family: Calibri; font-size: 11pt; }
+.list-11 li { padding-left: 10px; }
+.list-11 li::marker { content: '○'; font-family: Courier New; font-size: 11pt; }
+.list-2 li { padding-left: 10px; }
+.list-2 li::marker { content: '•'; font-family: Calibri; font-size: 11pt; }
+.list-3 li { padding-left: 10px; }
+.list-3 li::marker { content: '○'; font-family: Courier New; font-size: 11pt; }
+.list-4 li { padding-left: 10px; }
+.list-4 li::marker { content: '•'; font-family: Calibri; font-size: 11pt; }
+.list-5 li { padding-left: 10px; }
+.list-5 li::marker { content: '○'; font-family: Courier New; font-size: 11pt; }
+.list-6 li { padding-left: 10px; }
+.list-6 li::marker { content: '•'; font-family: Calibri; font-size: 11pt; }
+.list-7 li { padding-left: 10px; }
+.list-7 li::marker { content: '○'; font-family: Courier New; font-size: 11pt; }
+.list-8 li { padding-left: 10px; }
+.list-8 li::marker { content: '•'; font-family: Calibri; font-size: 11pt; }
+.list-9 li { padding-left: 10px; }
+.list-9 li::marker { content: '○'; font-family: Courier New; font-size: 11pt; }
+
+&lt;/style&gt;
+</code></pre>
+</head>
+<body class="jop-noMdConv">
+<div class="title jop-noMdConv" style="left:48px;position:absolute;top:24px"><div class="container-outline jop-noMdConv" style="width:768px"><div class="outline-element jop-noMdConv" style="margin-left:0px"><span style="font-family:Calibri Light;font-size:20pt;line-height:32px" class="jop-noMdConv">Human BIO Textbook</span></div>
+</div><div class="container-outline jop-noMdConv" style="width:768px"><div class="outline-element jop-noMdConv" style="margin-left:0px"><span style="color:rgb(118,118,118);font-family:Calibri;font-size:10pt;line-height:16px" class="jop-noMdConv">Thursday, September 4, 2025</span></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><span style="color:rgb(118,118,118);font-family:Calibri;font-size:10pt;line-height:16px" class="jop-noMdConv">12:44 PM</span></div>
+</div></div><div class="container-outline jop-noMdConv" style="left:48px;position:absolute;top:115px;width:720px"><div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold;line-height:17px" class="jop-noMdConv">Overview:</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv">The document serves as a comprehensive textbook on human biology, emphasizing the relevance of biological concepts to everyday life and societal challenges. It integrates digital learning resources and addresses contemporary topics such as climate change, biodiversity loss, and emerging diseases.</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold;line-height:17px" class="jop-noMdConv">Key Content Areas and Features:</p></div>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;font-weight:bold;line-height:17px" class="jop-noMdConv"> </p></div><ul class="list-0 jop-noMdConv" style="left:-10px;position:relative"><li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;font-weight:bold;line-height:17px" class="jop-noMdConv">About the Authors and Contributors:</span><ul class="list-1 jop-noMdConv" style="left:-10px;position:relative"><li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"><span style="font-weight:bold" class="jop-noMdConv">Sylvia S. Mader:</span> Nationally recognized biology text author, educated at Bryn Mawr, Harvard, Tufts, and Nova Southeastern. Known for her crisp and entertaining writing style.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"><span style="font-weight:bold" class="jop-noMdConv">Michael Windelspecht:</span> Educator with experience teaching introductory biology, genetics, and human genetics. Holds degrees from Michigan State and the University of South Florida. Focuses on data analysis from digital learning platforms and developing personalized microlearning assets. Has authored and edited over 30 reference textbooks. Manages the Ricochet Science website.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"><span style="font-weight:bold" class="jop-noMdConv">Dave Cox:</span> Professor of biology at Lincoln Land Community College. Teaches introductory biology, marine biology, and biological field studies. Contributor to multiple McGraw Hill titles and develops educational resources for ecotourism.</span></li>
+</ul></li>
+</ul>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"> </p></div><ul class="list-2 jop-noMdConv" style="left:-10px;position:relative"><li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;font-weight:bold;line-height:17px" class="jop-noMdConv">Digital Learning and Instructor/Student Resources:</span><ul class="list-3 jop-noMdConv" style="left:-10px;position:relative"><li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"><span style="font-weight:bold" class="jop-noMdConv">McGraw Hill Connect:</span> A platform offering tools for instructors (course building, auto-grading, LMS integration, reports) and students (adaptive study resources like SmartBook 2.0, ReadAnywhere app for offline access, digital eBook, assignments).</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"><span style="font-weight:bold" class="jop-noMdConv">ISTUDY/SUPPORT AT every step:</span> Emphasizes flexible and intuitive tools to maximize study time and meet individual learning needs.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"><span style="font-weight:bold" class="jop-noMdConv">Virtual Labs and Lab Simulations:</span> Designed to help students learn practical and conceptual skills for online or in-person lab experiences, with adaptive pre-lab and post-lab assessments.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"><span style="font-weight:bold" class="jop-noMdConv">Relevancy Modules:</span> Supplementary eBooks accompanying each unit, connecting biological content to societal topics. Each module includes an introductory video, scientific concepts overview, application, infographic, and discussion/assessment questions. Examples include "The Biology of Chocolate," "COVID-19: The Rise of a Global Pandemic," and "Climate Change."</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"><span style="font-weight:bold" class="jop-noMdConv">BioNOW Videos:</span> Narrated and produced by Jason Carlson, these videos offer a relevant, applied approach to help students relate biology to their daily lives.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"><span style="font-weight:bold" class="jop-noMdConv">Ricochet Science Website:</span> Managed by Michael Windelspecht, this site (ricochetscience.com) provides updates on science news, PopScience articles for classroom discussions, videos, and tutorial animations.</span></li>
+</ul></li>
+</ul>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"> </p></div><ul class="list-4 jop-noMdConv" style="left:-10px;position:relative"><li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;font-weight:bold;line-height:17px" class="jop-noMdConv">Goals of the Seventeenth Edition (Preface):</span><ul class="list-5 jop-noMdConv" style="left:-10px;position:relative"><li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv">Make content more relevant by updating chapter openers and themed readings to focus on current issues.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv">Integrate relevancy modules.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv">Redesign artwork for digital mobile devices.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv">Develop a new Featured Reading Series: "The Diversity of Science," highlighting unrecognized scientists.</span></li>
+</ul></li>
+</ul>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"> </p></div><ul class="list-6 jop-noMdConv" style="left:-10px;position:relative"><li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"><span style="font-weight:bold" class="jop-noMdConv">Brief and Full Contents:<br class="jop-noMdConv" /></span>The textbook is organized into 7 units and 25 chapters, covering fundamental aspects of human biology.</span><ul class="list-7 jop-noMdConv" style="left:-10px;position:relative"><li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"><span style="font-weight:bold" class="jop-noMdConv">Unit 1: Human Organization</span> (Ch 1-4): Exploring Life and Science, Chemistry of Life, Cell Structure and Function, Tissues, Organ Systems, and Homeostasis.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"><span style="font-weight:bold" class="jop-noMdConv">Unit 2: Maintenance of the Human Body</span> (Ch 5-11): Cardiovascular System (Heart and Blood Vessels, Blood), Lymphatic and Immune Systems, Biology of Infectious Diseases, Digestive System and Nutrition, Respiratory System, Urinary System.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"><span style="font-weight:bold" class="jop-noMdConv">Unit 3: Movement and Support in Humans</span> (Ch 12-13): Skeletal System, Muscular System.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"><span style="font-weight:bold" class="jop-noMdConv">Unit 4: Integration and Coordination in Humans</span> (Ch 14-16): Nervous System, Senses, Endocrine System.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"><span style="font-weight:bold" class="jop-noMdConv">Unit 5: Reproduction in Humans</span> (Ch 17-18): Reproductive System, Development and Aging.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"><span style="font-weight:bold" class="jop-noMdConv">Unit 6: Human Genetics</span> (Ch 19-22): Cell Division, Cancer, Genetic Inheritance, DNA Biology and Technology.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"><span style="font-weight:bold" class="jop-noMdConv">Unit 7: Human Evolution and Ecology</span> (Ch 23-25): Human Evolution, Ecology and the Nature of Ecosystems, Human Interactions with the Biosphere.</span></li>
+</ul></li>
+</ul>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"> </p></div><ul class="list-8 jop-noMdConv" style="left:-10px;position:relative"><li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"><span style="font-weight:bold" class="jop-noMdConv">Readings (Special Features):</span> The book includes "BIOLOGY TODAY" sections categorized into Diversity in Science, Health, and Science. These provide real-world examples and deeper dives into specific topics. Examples include:</span><ul class="list-9 jop-noMdConv" style="left:-10px;position:relative"><li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"><span style="font-weight:bold" class="jop-noMdConv">Diversity in Science:</span> The Legacy of Marie Curie, Nettie Stevens and the Discovery of the Sex Chromosomes.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"><span style="font-weight:bold" class="jop-noMdConv">Health:</span> Fiber in the Diet, Good and Bad Cholesterol, Recent Findings in Preventing Heart Disease, COVID-19.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"><span style="font-weight:bold" class="jop-noMdConv">Science:</span> Adapting to Life at High Elevations, Discovering the Cause of Ulcers, Artificial Lungs, Genetics of Eye Color, The Complexity of Our Evolutionary Past.</span></li>
+</ul></li>
+</ul>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><p style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"> </p></div><ul class="list-10 jop-noMdConv" style="left:-10px;position:relative"><li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;font-weight:bold;line-height:17px" class="jop-noMdConv">Core Concepts and Themes (from Chapter 1 summary):</span><ul class="list-11 jop-noMdConv" style="left:-10px;position:relative"><li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"><span style="font-weight:bold" class="jop-noMdConv">Characteristics of Life:</span> Organization (atoms to biosphere), acquisition of materials and energy (metabolism, photosynthesis), reproduction and development (DNA, genes, mutations), homeostasis, response to stimuli, and evolutionary history (natural selection, adaptation).</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"><span style="font-weight:bold" class="jop-noMdConv">Humans and Other Animals:</span> Humans are Eukarya, Kingdom Animalia (primate mammals), sharing a common apelike ancestor with apes. Emphasis on human cultural heritage (language, tool use, values).</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"><span style="font-weight:bold" class="jop-noMdConv">Science as a Process (Scientific Method):</span> Observation, hypothesis development (inductive reasoning), hypothesis testing (experimentation, deductive reasoning, experimental/control groups, model organisms/systems), data collection and analysis (graphs, statistical significance), conclusion, and scientific publications (peer review). The concept of scientific theory (e.g., Cell Theory, Gene Theory, Theory of Evolution) as accepted explanations.</span></li>
+<li class="outline-element jop-noMdConv" style="margin-left:36px"><span style="font-family:Calibri;font-size:11pt;line-height:17px" class="jop-noMdConv"><span style="font-weight:bold" class="jop-noMdConv">Science and Societal Challenges:</span> Distinction between science and technology. Key challenges include climate change (global warming, CO2 emissions), biodiversity and habitat loss (extinction rates, threat to rainforests and coral reefs), and emerging/reemerging diseases (avian influenza, SARS, MERS, COVID-19, Ebola).</span></li>
+</ul></li>
+</ul>
+<div class="outline-element jop-noMdConv" style="margin-left:0px"><cite style="color:rgb(89,89,89);font-family:Calibri;font-size:9pt;line-height:14px" class="jop-noMdConv">From &lt;<a href="https://drive.google.com/drive/my-drive" class="jop-noMdConv">https://drive.google.com/drive/my-drive</a>&gt; </cite></div>
+</div>
+</body></html>
+        </div>
+
+        <div class="tags">
+            
+        </div>
+
+        <footer>
+            Shared from Joplin
+        </footer>
+    </div>
+
+    <script>
+        const btn = document.getElementById('theme-btn');
+        const updateBtnText = (t) => btn.textContent = t === 'dark' ? 'Light' : 'Dark';
+        
+        const storedTheme = localStorage.getItem('theme');
+        if (storedTheme) {
+            document.documentElement.setAttribute('data-theme', storedTheme);
+            updateBtnText(storedTheme);
+        }
+
+        btn.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            updateBtnText(theme);
+        });
+
+        function adjustFont(size) {
+            const content = document.getElementById('main-content');
+            content.classList.remove('font-sm', 'font-lg');
+            if (size === 'sm') content.classList.add('font-sm');
+            if (size === 'lg') content.classList.add('font-lg');
+        }
+    </script>
+</body>
+</html>
