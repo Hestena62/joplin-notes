@@ -3,43 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Archives - My Joplin Site</title>
+    <title>Archive</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
-        header { border-bottom: 1px solid #eee; margin-bottom: 40px; }
-        footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #eee; font-size: 0.9rem; color: #666; }
+        :root {
+            --bg: #f9f9f9;
+            --paper: #fff;
+            --text: #333;
+            --text-light: #777;
+            --border: #eee;
+            --accent: #d32f2f;
+        }
+
+        [data-theme="dark"] {
+            --bg: #121212;
+            --paper: #1e1e1e;
+            --text: #ddd;
+            --text-light: #999;
+            --border: #333;
+            --accent: #ff5252;
+        }
+
+        body { font-family: Georgia, serif; line-height: 1.6; color: var(--text); background: var(--bg); margin: 0; }
+        .wrapper { max-width: 700px; margin: 40px auto; padding: 40px; background: var(--paper); border: 1px solid var(--border); }
+        header { margin-bottom: 40px; text-align: center; position: relative; }
+        h1 { font-weight: normal; margin-bottom: 20px; }
+        .theme-toggle { position: absolute; top: 0; right: 0; background: none; border: 1px solid var(--border); color: var(--text); padding: 5px 10px; cursor: pointer; font-size: 12px; }
+        nav a { color: var(--text-light); text-decoration: none; margin: 0 10px; font-size: 14px; }
         .archive-list { list-style: none; padding: 0; }
-        .archive-item { margin-bottom: 15px; display: flex; justify-content: space-between; align-items: baseline; }
-        .archive-item a { text-decoration: none; color: #007bff; font-weight: 500; }
+        .archive-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border); }
+        .archive-item a { color: var(--accent); text-decoration: none; }
         .archive-item a:hover { text-decoration: underline; }
-        .archive-date { color: #888; font-size: 0.9rem; font-family: monospace; }
+        .date { color: var(--text-light); font-size: 14px; }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/index">Home</a> | 
-            <a href="/archives">Archives</a> | 
-            <a href="/about">About</a>
-        </nav>
-        <h1>Article Archives</h1>
-        <p>A full list of everything I have written.</p>
-    </header>
+    <div class="wrapper">
+        <header>
+            <button class="theme-toggle" id="theme-btn">Theme</button>
+            <h1>Archives</h1>
+            <nav>
+                <a href="/index">Home</a>
+                <a href="/archives">Archives</a>
+                <a href="/about">About</a>
+            </nav>
+        </header>
 
-    <main>
         <ul class="archive-list">
             
                 <li class="archive-item">
                     <a href="article/ewrtr">ewrtr</a>
-                    <span class="archive-date">2026-04-23</span>
+                    <span class="date">2026-04-23</span>
                 </li>
             
         </ul>
-    </main>
-
-    <footer>
-        <p>Total articles: 1</p>
-        <p>Built with Joplin Pages Publisher</p>
-    </footer>
+    </div>
+    <script>
+        const btn = document.getElementById('theme-btn');
+        const updateBtnText = (t) => btn.textContent = t === 'dark' ? 'Light' : 'Dark';
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            updateBtnText(currentTheme);
+        }
+        btn.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            updateBtnText(theme);
+        });
+    </script>
 </body>
 </html>

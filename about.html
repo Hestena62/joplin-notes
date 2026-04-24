@@ -3,37 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - My Joplin Site</title>
+    <title>About</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
-        header { border-bottom: 1px solid #eee; margin-bottom: 40px; }
-        footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #eee; font-size: 0.9rem; color: #666; }
-        .about-content { background: #fafafa; padding: 30px; border-radius: 8px; border: 1px solid #eee; }
-        .profile-title { margin-top: 0; }
+        :root {
+            --bg: #f9f9f9;
+            --paper: #fff;
+            --text: #333;
+            --text-light: #777;
+            --border: #eee;
+        }
+
+        [data-theme="dark"] {
+            --bg: #121212;
+            --paper: #1e1e1e;
+            --text: #ddd;
+            --text-light: #999;
+            --border: #333;
+        }
+
+        body { font-family: Georgia, serif; line-height: 1.8; color: var(--text); background: var(--bg); margin: 0; }
+        .wrapper { max-width: 700px; margin: 40px auto; padding: 40px; background: var(--paper); border: 1px solid var(--border); }
+        header { text-align: center; margin-bottom: 40px; position: relative; }
+        h1 { font-weight: normal; }
+        .theme-toggle { position: absolute; top: 0; right: 0; background: none; border: 1px solid var(--border); color: var(--text); padding: 5px 10px; cursor: pointer; font-size: 12px; }
+        nav a { color: var(--text-light); text-decoration: none; margin: 0 10px; font-size: 14px; }
+        .content { font-size: 17px; }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/index">Home</a> | 
-            <a href="/archives">Archives</a> | 
-            <a href="/about">About</a>
-        </nav>
-        <h1>About</h1>
-    </header>
+    <div class="wrapper">
+        <header>
+            <button class="theme-toggle" id="theme-btn">Theme</button>
+            <h1>About</h1>
+            <nav>
+                <a href="/index">Home</a>
+                <a href="/archives">Archives</a>
+                <a href="/about">About</a>
+            </nav>
+        </header>
 
-    <main class="about-content">
-        <h2 class="profile-title">Hello there!</h2>
-        <p>This is my personal notes website published directly from Joplin. I use this space to document my thoughts, share what I am learning, and keep a public archive of my notes.</p>
-        
-        <p>You can find my latest updates on the homepage or browse through everything in the archives. Thanks for stopping by!</p>
-
-        <h3>Contact</h3>
-        <p>If you want to reach out, feel free to find me on my social channels or send an email.</p>
-    </main>
-
-    <footer>
-        <p>Built with Joplin Pages Publisher</p>
-    </footer>
+        <div class="content">
+            <p>This is a minimal note sharing platform. It is designed to be fast and readable, focusing entirely on the text.</p>
+            <p>I have added accessibility features like font resizing and a theme toggle to make reading easier for everyone.</p>
+        </div>
+    </div>
+    <script>
+        const btn = document.getElementById('theme-btn');
+        const updateBtnText = (t) => btn.textContent = t === 'dark' ? 'Light' : 'Dark';
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            updateBtnText(currentTheme);
+        }
+        btn.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            updateBtnText(theme);
+        });
+    </script>
 </body>
 </html>

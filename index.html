@@ -3,198 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Notes - Notion Style</title>
+    <title>Note Share</title>
     <style>
         :root {
-            --bg: #191919;
-            --sidebar-bg: #202020;
-            --text: #efefef;
-            --text-muted: #9b9b9b;
-            --hover: #2c2c2c;
-            --accent: #2383e2;
-            --border: #2f2f2f;
+            --bg: #f9f9f9;
+            --paper: #fff;
+            --text: #333;
+            --text-light: #777;
+            --border: #eee;
+            --accent: #d32f2f;
+            --input-bg: #fff;
         }
-        
-        * { box-sizing: border-box; }
-        
-        body { 
+
+        [data-theme="dark"] {
+            --bg: #121212;
+            --paper: #1e1e1e;
+            --text: #ddd;
+            --text-light: #999;
+            --border: #333;
+            --accent: #ff5252;
+            --input-bg: #2a2a2a;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.6;
+            color: var(--text);
             background: var(--bg);
-            color: var(--text);
-            font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
             margin: 0;
-            display: flex;
-            height: 100vh;
+            padding: 0;
+            transition: background 0.3s, color 0.3s;
         }
 
-        /* Sidebar */
-        aside {
-            width: 240px;
-            background: var(--sidebar-bg);
-            border-right: 1px solid var(--border);
-            display: flex;
-            flex-direction: column;
-            padding: 12px;
-            flex-shrink: 0;
+        .wrapper {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background: var(--paper);
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
-        .sidebar-header {
-            padding: 8px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-item {
-            padding: 4px 8px;
-            border-radius: 4px;
-            color: var(--text);
-            text-decoration: none;
-            font-size: 14px;
-            margin-bottom: 2px;
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-item:hover { background: var(--hover); }
-
-        /* Main Content */
-        main {
-            flex-grow: 1;
-            overflow-y: auto;
-            padding: 40px 60px;
-        }
-
-        .content-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .page-title {
-            font-size: 40px;
-            font-weight: 700;
-            margin-bottom: 32px;
-        }
-
-        /* Search Section */
-        .search-container {
-            margin-bottom: 40px;
+        header {
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
             position: relative;
         }
 
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 0;
+            background: none;
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 12px;
+            font-family: sans-serif;
+        }
+
+        h1 { margin: 0; font-size: 28px; font-weight: normal; }
+
+        nav { margin-top: 15px; }
+        nav a { color: var(--text-light); text-decoration: none; margin: 0 10px; font-size: 14px; }
+        nav a:hover { color: var(--text); }
+
+        .search-area { padding: 20px 0; border-bottom: 1px solid var(--border); }
         #search-input {
             width: 100%;
-            background: var(--hover);
+            padding: 10px;
             border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 8px 12px;
+            background: var(--input-bg);
             color: var(--text);
-            font-size: 14px;
-            outline: none;
+            font-family: inherit;
+            box-sizing: border-box;
         }
 
-        #search-input:focus {
-            border-color: var(--accent);
-        }
+        .posts { padding: 20px 0; }
+        .post-item { margin-bottom: 30px; display: block; text-decoration: none; color: inherit; }
+        .post-title { font-size: 20px; color: var(--accent); margin-bottom: 5px; }
+        .post-item:hover .post-title { text-decoration: underline; }
+        .post-meta { font-size: 12px; color: var(--text-light); margin-bottom: 10px; }
+        .post-excerpt { font-size: 15px; color: var(--text-light); }
 
-        /* Article List */
-        .article-list {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .article-row {
-            padding: 8px;
-            border-radius: 4px;
-            text-decoration: none;
-            color: var(--text);
-            display: flex;
-            align-items: center;
-            transition: background 0.1s;
-        }
-
-        .article-row:hover { background: var(--hover); }
-
-        .article-row span { margin-right: 12px; font-size: 18px; }
-
-        .article-info { display: flex; flex-direction: column; }
-
-        .article-title { font-weight: 500; font-size: 16px; }
-
-        .article-date { font-size: 12px; color: var(--text-muted); }
-
-        footer {
-            margin-top: 100px;
-            padding-bottom: 40px;
-            font-size: 12px;
-            color: var(--text-muted);
-            border-top: 1px solid var(--border);
-            padding-top: 20px;
-        }
-
-        @media (max-width: 768px) {
-            body { flex-direction: column; }
-            aside { width: 100%; height: auto; }
-            main { padding: 20px; }
-        }
+        footer { text-align: center; padding: 40px 0; color: var(--text-light); font-size: 12px; }
     </style>
 </head>
 <body>
-    <aside>
-        <div class="sidebar-header">
-            <span style="margin-right: 8px;">📓</span> My Workspace
-        </div>
-        <nav>
-            <a href="/index" class="nav-item">🏠 Home</a>
-            <a href="/archives" class="nav-item">🗄️ Archives</a>
-            <a href="/about" class="nav-item">👤 About</a>
-        </nav>
-    </aside>
+    <div class="wrapper">
+        <header>
+            <button class="theme-toggle" id="theme-btn">Theme</button>
+            <h1>My Shared Notes</h1>
+            <nav>
+                <a href="/index">Home</a>
+                <a href="/archives">Archives</a>
+                <a href="/about">About</a>
+            </nav>
+        </header>
 
-    <main>
-        <div class="content-container">
-            <h1 class="page-title">Personal Notes</h1>
+        <div class="search-area">
+            <input type="text" id="search-input" placeholder="Search notes...">
+        </div>
+
+        <div class="posts" id="post-container">
             
-            <div class="search-container">
-                <input type="text" id="search-input" placeholder="Search notes by title or content...">
-            </div>
-
-            <div class="article-list" id="article-list">
-                
-                    <a class="article-row" href="article/ewrtr" 
-                       data-title="ewrtr"
-                       data-content="the internet is a good place to find educational work.">
-                        <span>📄</span>
-                        <div class="article-info">
-                            <div class="article-title">ewrtr</div>
-                            <div class="article-date">Apr 23, 2026</div>
-                        </div>
-                    </a>
-                
-            </div>
-
-            <footer>
-                Site generated at 2026-04-24 01:31
-            </footer>
+                <a href="article/ewrtr" class="post-item" 
+                   data-title="ewrtr"
+                   data-content="the internet is a good place to find educational work.">
+                    <div class="post-title">ewrtr</div>
+                    <div class="post-meta">Posted on 2026-04-23</div>
+                    <div class="post-excerpt">
+                        The internet is a good place to find educational work....
+                    </div>
+                </a>
+            
         </div>
-    </main>
+
+        <footer>
+            Updated 2026-04-24
+        </footer>
+    </div>
 
     <script>
+        const btn = document.getElementById('theme-btn');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            btn.textContent = currentTheme === 'dark' ? 'Light' : 'Dark';
+        }
+
+        btn.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme');
+            if (theme === 'dark') {
+                theme = 'light';
+                btn.textContent = 'Dark';
+            } else {
+                theme = 'dark';
+                btn.textContent = 'Light';
+            }
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+        });
+
         const searchInput = document.getElementById('search-input');
-        const articleRows = document.querySelectorAll('.article-row');
+        const posts = document.querySelectorAll('.post-item');
 
         searchInput.addEventListener('input', (e) => {
             const query = e.target.value.toLowerCase();
-            
-            articleRows.forEach(row => {
-                const title = row.getAttribute('data-title');
-                const content = row.getAttribute('data-content');
-                
-                if (title.includes(query) || content.includes(query)) {
-                    row.style.display = 'flex';
-                } else {
-                    row.style.display = 'none';
-                }
+            posts.forEach(post => {
+                const title = post.getAttribute('data-title');
+                const content = post.getAttribute('data-content');
+                post.style.display = (title.includes(query) || content.includes(query)) ? 'block' : 'none';
             });
         });
     </script>
