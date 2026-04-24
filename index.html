@@ -13,6 +13,7 @@
             --border: #ddd;
             --accent: #800000;
             --input-bg: #fff;
+            --tag-bg: #f0f0f0;
         }
 
         [data-theme="dark"] {
@@ -23,6 +24,7 @@
             --border: #444;
             --accent: #ff4d4d;
             --input-bg: #333;
+            --tag-bg: #2d2d2d;
         }
 
         body {
@@ -85,22 +87,44 @@
         }
 
         .note-list { padding: 30px 0; }
-        .note-item { margin-bottom: 35px; display: block; text-decoration: none; color: inherit; }
-        .note-course { font-family: sans-serif; font-size: 11px; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 5px; }
-        .note-title { font-size: 22px; color: var(--text); margin-bottom: 8px; line-height: 1.2; }
+        .note-item { 
+            margin-bottom: 40px; 
+            display: block; 
+            text-decoration: none; 
+            color: inherit; 
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        .note-item:last-child { border-bottom: none; }
+
+        .note-labels { 
+            display: flex; 
+            gap: 10px; 
+            align-items: center; 
+            margin-bottom: 8px;
+            font-family: sans-serif;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .label-class { color: var(--accent); font-weight: 600; }
+        .label-type { color: var(--text-light); background: var(--tag-bg); padding: 2px 6px; border-radius: 3px; }
+
+        .note-title { font-size: 22px; color: var(--text); margin-bottom: 8px; line-height: 1.2; font-weight: normal; }
         .note-item:hover .note-title { color: var(--accent); text-decoration: underline; }
+        
         .note-meta { font-size: 12px; color: var(--text-light); margin-bottom: 12px; font-family: sans-serif; }
         .note-excerpt { font-size: 15px; color: var(--text-light); line-height: 1.5; }
 
-        footer { text-align: center; padding: 50px 0; color: var(--text-light); font-size: 11px; font-family: sans-serif; border-top: 1px solid var(--border); }
+        footer { text-align: center; padding: 50px 0; color: var(--text-light); font-size: 11px; font-family: sans-serif; }
     </style>
 </head>
 <body>
     <div class="wrapper">
         <header>
             <button class="theme-toggle" id="theme-btn">Toggle Theme</button>
-            <h1>Academic Journal</h1>
-            <div class="sub-head">Personal class notes and lecture summaries</div>
+            <h1>Academic Archive</h1>
+            <div class="sub-head">Organized class notes, lecture summaries, and explainers</div>
             <nav>
                 <a href="/index">Notes</a>
                 <a href="/archives">Timeline</a>
@@ -109,7 +133,7 @@
         </header>
 
         <div class="search-area">
-            <input type="text" id="search-input" placeholder="Search by topic, course, or keyword...">
+            <input type="text" id="search-input" placeholder="Filter by class, document type, or topic...">
         </div>
 
         <div class="note-list" id="note-container">
@@ -120,14 +144,21 @@
 
 - [important info](:/4f02427961b545288a7b0d40607af65a &#34;important info&#34;)
 - [week 00](:/4c7a51085dae4e7f8a1a46b8a02a2e3e &#34;week 00&#34;)"
-                   data-tags="">
-                    <span class="note-course">
-                        
-                            General Notes
-                        
-                    </span>
+                   data-tags=""
+                   data-class="general"
+                   data-type="note">
+                    
+                    <div class="note-labels">
+                        <span class="label-class">General</span>
+                        <span class="label-type">Note</span>
+                    </div>
+
                     <div class="note-title">Master</div>
-                    <div class="note-meta">Published April 24, 2026</div>
+                    
+                    <div class="note-meta">
+                        Session Date: April 24, 2026
+                    </div>
+
                     <div class="note-excerpt">
                          Master 
 
@@ -202,14 +233,21 @@
 
 
 &lt;/body&gt;&lt;/html&gt;"
-                   data-tags="">
-                    <span class="note-course">
-                        
-                            General Notes
-                        
-                    </span>
+                   data-tags=""
+                   data-class="general"
+                   data-type="note">
+                    
+                    <div class="note-labels">
+                        <span class="label-class">General</span>
+                        <span class="label-type">Note</span>
+                    </div>
+
                     <div class="note-title">Readings and Materials</div>
-                    <div class="note-meta">Published April 24, 2026</div>
+                    
+                    <div class="note-meta">
+                        Session Date: April 24, 2026
+                    </div>
+
                     <div class="note-excerpt">
                         
 
@@ -446,14 +484,21 @@
 
 
 &lt;/body&gt;&lt;/html&gt;"
-                   data-tags="">
-                    <span class="note-course">
-                        
-                            General Notes
-                        
-                    </span>
+                   data-tags=""
+                   data-class="general"
+                   data-type="note">
+                    
+                    <div class="note-labels">
+                        <span class="label-class">General</span>
+                        <span class="label-type">Note</span>
+                    </div>
+
                     <div class="note-title">How the course will work</div>
-                    <div class="note-meta">Published April 24, 2026</div>
+                    
+                    <div class="note-meta">
+                        Session Date: April 24, 2026
+                    </div>
+
                     <div class="note-excerpt">
                         
 
@@ -632,14 +677,21 @@
 
 
 &lt;/body&gt;&lt;/html&gt;"
-                   data-tags="">
-                    <span class="note-course">
-                        
-                            General Notes
-                        
-                    </span>
+                   data-tags=""
+                   data-class="general"
+                   data-type="note">
+                    
+                    <div class="note-labels">
+                        <span class="label-class">General</span>
+                        <span class="label-type">Note</span>
+                    </div>
+
                     <div class="note-title">Study Doc</div>
-                    <div class="note-meta">Published April 24, 2026</div>
+                    
+                    <div class="note-meta">
+                        Session Date: April 24, 2026
+                    </div>
+
                     <div class="note-excerpt">
                         
 
@@ -877,14 +929,21 @@
 
 
 &lt;/body&gt;&lt;/html&gt;"
-                   data-tags="">
-                    <span class="note-course">
-                        
-                            General Notes
-                        
-                    </span>
+                   data-tags=""
+                   data-class="general"
+                   data-type="note">
+                    
+                    <div class="note-labels">
+                        <span class="label-class">General</span>
+                        <span class="label-type">Note</span>
+                    </div>
+
                     <div class="note-title">Study Guide_1</div>
-                    <div class="note-meta">Published April 24, 2026</div>
+                    
+                    <div class="note-meta">
+                        Session Date: April 24, 2026
+                    </div>
+
                     <div class="note-excerpt">
                         
 
@@ -1181,14 +1240,21 @@
 
 
 &lt;/body&gt;&lt;/html&gt;"
-                   data-tags="">
-                    <span class="note-course">
-                        
-                            General Notes
-                        
-                    </span>
+                   data-tags=""
+                   data-class="general"
+                   data-type="note">
+                    
+                    <div class="note-labels">
+                        <span class="label-class">General</span>
+                        <span class="label-type">Note</span>
+                    </div>
+
                     <div class="note-title">Briefing Doc</div>
-                    <div class="note-meta">Published April 24, 2026</div>
+                    
+                    <div class="note-meta">
+                        Session Date: April 24, 2026
+                    </div>
+
                     <div class="note-excerpt">
                         
 
@@ -1406,14 +1472,21 @@
 
 
 &lt;/body&gt;&lt;/html&gt;"
-                   data-tags="">
-                    <span class="note-course">
-                        
-                            General Notes
-                        
-                    </span>
+                   data-tags=""
+                   data-class="general"
+                   data-type="note">
+                    
+                    <div class="note-labels">
+                        <span class="label-class">General</span>
+                        <span class="label-type">Note</span>
+                    </div>
+
                     <div class="note-title">Briefing Document</div>
-                    <div class="note-meta">Published April 24, 2026</div>
+                    
+                    <div class="note-meta">
+                        Session Date: April 24, 2026
+                    </div>
+
                     <div class="note-excerpt">
                         
 
@@ -1621,14 +1694,21 @@
 
 
 &lt;/body&gt;&lt;/html&gt;"
-                   data-tags="">
-                    <span class="note-course">
-                        
-                            General Notes
-                        
-                    </span>
+                   data-tags=""
+                   data-class="general"
+                   data-type="note">
+                    
+                    <div class="note-labels">
+                        <span class="label-class">General</span>
+                        <span class="label-type">Note</span>
+                    </div>
+
                     <div class="note-title">Study Guide</div>
-                    <div class="note-meta">Published April 24, 2026</div>
+                    
+                    <div class="note-meta">
+                        Session Date: April 24, 2026
+                    </div>
+
                     <div class="note-excerpt">
                         
 
@@ -1739,14 +1819,21 @@
 
 
 &lt;/body&gt;&lt;/html&gt;"
-                   data-tags="">
-                    <span class="note-course">
-                        
-                            General Notes
-                        
-                    </span>
+                   data-tags=""
+                   data-class="general"
+                   data-type="note">
+                    
+                    <div class="note-labels">
+                        <span class="label-class">General</span>
+                        <span class="label-type">Note</span>
+                    </div>
+
                     <div class="note-title">5 Text</div>
-                    <div class="note-meta">Published April 24, 2026</div>
+                    
+                    <div class="note-meta">
+                        Session Date: April 24, 2026
+                    </div>
+
                     <div class="note-excerpt">
                         
 
@@ -1894,14 +1981,21 @@
 
 
 &lt;/body&gt;&lt;/html&gt;"
-                   data-tags="">
-                    <span class="note-course">
-                        
-                            General Notes
-                        
-                    </span>
+                   data-tags=""
+                   data-class="general"
+                   data-type="note">
+                    
+                    <div class="note-labels">
+                        <span class="label-class">General</span>
+                        <span class="label-type">Note</span>
+                    </div>
+
                     <div class="note-title">Book Outline</div>
-                    <div class="note-meta">Published April 24, 2026</div>
+                    
+                    <div class="note-meta">
+                        Session Date: April 24, 2026
+                    </div>
+
                     <div class="note-excerpt">
                         
 
@@ -1911,149 +2005,6 @@
     
     /*** Start default CSS ***/
     * { margin: 0; padd...
-                    </div>
-                </a>
-            
-                <a href="article/human-bio-textbook" class="note-item" 
-                   data-title="human bio textbook"
-                   data-content="&lt;!doctype html&gt;
-&lt;html&gt;&lt;head&gt;
-    &lt;meta charset=&#34;utf-8&#34;&gt;
-    &lt;title&gt;human bio textbook&lt;/title&gt;
-    
-    &lt;style&gt;
-    /*** start default css ***/
-    * { margin: 0; padding: 0; font-weight: normal; }
-    table, tr, td { border-color: #a3a3a3; }
-    ul, ol { padding: 0; }
-    .title .outline-element { display: inline; }
-    .title .outline-element:nth-child(2) { margin-left: 10px !important; }
-    .container-outline { font-family: calibri, sans-serif; font-size: 6pt; }
-    .ink-text, .ink-space { display: inline-block; position: relative; vertical-align: bottom; }
-    .ink-text { top: 0; left: 0; }
-
-    /* icons */
-    .note-tag-icon {
-        position: relative;
-        --note-tag-left: -23px;
-        --note-tag-width: 16px;
-        --note-tag-height: 16px;
-    }
-    .note-tag-icon.-large {
-        --note-tag-left: -25px;
-        --note-tag-width: 20px;
-        --note-tag-height: 20px;
-    }
-    .note-tag-icon &gt; img, .note-tag-icon &gt; svg {
-        width: var(--note-tag-width);
-        height: var(--note-tag-height);
-        left: var(--note-tag-left);
-    }
-
-    .tagged-list { list-style: none; padding-left: 0; }
-    
-    .note-tag-icon &gt; svg, .note-tag-icon &gt; img { position: absolute; }
-    .icon-secondary &gt; svg, .icon-secondary &gt; img { position: absolute; fill: black; filter: drop-shadow(0 0 2px white); height: 12px; top: -1px; }
-    .icon-secondary &gt; .content { position: absolute; color: black; filter: drop-shadow(0 0 2px white); font-size: 10px; color: black; top: -1px; user-select: none; }
-    /*** end default css ***/
-
-    .list-0 li { padding-left: 10px; }
-    .list-0 li::marker { content: &#39;•&#39;; font-family: calibri; font-size: 11pt; }
-    .list-1 li { padding-left: 10px; }
-    .list-1 li::marker { content: &#39;○&#39;; font-family: courier new; font-size: 11pt; }
-    .list-10 li { padding-left: 10px; }
-    .list-10 li::marker { content: &#39;•&#39;; font-family: calibri; font-size: 11pt; }
-    .list-11 li { padding-left: 10px; }
-    .list-11 li::marker { content: &#39;○&#39;; font-family: courier new; font-size: 11pt; }
-    .list-2 li { padding-left: 10px; }
-    .list-2 li::marker { content: &#39;•&#39;; font-family: calibri; font-size: 11pt; }
-    .list-3 li { padding-left: 10px; }
-    .list-3 li::marker { content: &#39;○&#39;; font-family: courier new; font-size: 11pt; }
-    .list-4 li { padding-left: 10px; }
-    .list-4 li::marker { content: &#39;•&#39;; font-family: calibri; font-size: 11pt; }
-    .list-5 li { padding-left: 10px; }
-    .list-5 li::marker { content: &#39;○&#39;; font-family: courier new; font-size: 11pt; }
-    .list-6 li { padding-left: 10px; }
-    .list-6 li::marker { content: &#39;•&#39;; font-family: calibri; font-size: 11pt; }
-    .list-7 li { padding-left: 10px; }
-    .list-7 li::marker { content: &#39;○&#39;; font-family: courier new; font-size: 11pt; }
-    .list-8 li { padding-left: 10px; }
-    .list-8 li::marker { content: &#39;•&#39;; font-family: calibri; font-size: 11pt; }
-    .list-9 li { padding-left: 10px; }
-    .list-9 li::marker { content: &#39;○&#39;; font-family: courier new; font-size: 11pt; }
-    
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-&lt;div class=&#34;title&#34; style=&#34;left: 48px; position: absolute; top: 24px;&#34;&gt;&lt;div class=&#34;container-outline&#34; style=&#34;width: 768px;&#34;&gt;&lt;div class=&#34;outline-element&#34; style=&#34;margin-left: 0px;&#34;&gt;&lt;span style=&#34;font-family: calibri light; font-size: 20pt; line-height: 32px;&#34;&gt;human bio textbook&lt;/span&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;div class=&#34;container-outline&#34; style=&#34;width: 768px;&#34;&gt;&lt;div class=&#34;outline-element&#34; style=&#34;margin-left: 0px;&#34;&gt;&lt;span style=&#34;color: rgb(118,118,118); font-family: calibri; font-size: 10pt; line-height: 16px;&#34;&gt;thursday, september 4, 2025&lt;/span&gt;&lt;/div&gt;
-&lt;div class=&#34;outline-element&#34; style=&#34;margin-left: 0px;&#34;&gt;&lt;span style=&#34;color: rgb(118,118,118); font-family: calibri; font-size: 10pt; line-height: 16px;&#34;&gt;12:44 pm&lt;/span&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;container-outline&#34; style=&#34;left: 48px; position: absolute; top: 115px; width: 720px;&#34;&gt;&lt;div class=&#34;outline-element&#34; style=&#34;margin-left: 0px;&#34;&gt;&lt;p style=&#34;font-family: calibri; font-size: 11pt; font-weight: bold; line-height: 17px;&#34;&gt;overview:&lt;/p&gt;&lt;/div&gt;
-&lt;div class=&#34;outline-element&#34; style=&#34;margin-left: 0px;&#34;&gt;&lt;p style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;the document serves as a comprehensive textbook on human biology, emphasizing the relevance of biological concepts to everyday life and societal challenges. it integrates digital learning resources and addresses contemporary topics such as climate change, biodiversity loss, and emerging diseases.&lt;/p&gt;&lt;/div&gt;
-&lt;div class=&#34;outline-element&#34; style=&#34;margin-left: 0px;&#34;&gt;&lt;p style=&#34;font-family: calibri; font-size: 11pt; font-weight: bold; line-height: 17px;&#34;&gt;key content areas and features:&lt;/p&gt;&lt;/div&gt;
-&lt;div class=&#34;outline-element&#34; style=&#34;margin-left: 0px;&#34;&gt;&lt;p style=&#34;font-family: calibri; font-size: 11pt; font-weight: bold; line-height: 17px;&#34;&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;&lt;ul class=&#34;list-0&#34; style=&#34;left: -10px; position: relative;&#34;&gt;&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; font-weight: bold; line-height: 17px;&#34;&gt;about the authors and contributors:&lt;/span&gt;&lt;ul class=&#34;list-1&#34; style=&#34;left: -10px; position: relative;&#34;&gt;&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&lt;span style=&#34;font-weight: bold;&#34;&gt;sylvia s. mader:&lt;/span&gt; nationally recognized biology text author, educated at bryn mawr, harvard, tufts, and nova southeastern. known for her crisp and entertaining writing style.&lt;/span&gt;&lt;/li&gt;
-&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&lt;span style=&#34;font-weight: bold;&#34;&gt;michael windelspecht:&lt;/span&gt; educator with experience teaching introductory biology, genetics, and human genetics. holds degrees from michigan state and the university of south florida. focuses on data analysis from digital learning platforms and developing personalized microlearning assets. has authored and edited over 30 reference textbooks. manages the ricochet science website.&lt;/span&gt;&lt;/li&gt;
-&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&lt;span style=&#34;font-weight: bold;&#34;&gt;dave cox:&lt;/span&gt; professor of biology at lincoln land community college. teaches introductory biology, marine biology, and biological field studies. contributor to multiple mcgraw hill titles and develops educational resources for ecotourism.&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;outline-element&#34; style=&#34;margin-left: 0px;&#34;&gt;&lt;p style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;&lt;ul class=&#34;list-2&#34; style=&#34;left: -10px; position: relative;&#34;&gt;&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; font-weight: bold; line-height: 17px;&#34;&gt;digital learning and instructor/student resources:&lt;/span&gt;&lt;ul class=&#34;list-3&#34; style=&#34;left: -10px; position: relative;&#34;&gt;&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&lt;span style=&#34;font-weight: bold;&#34;&gt;mcgraw hill connect:&lt;/span&gt; a platform offering tools for instructors (course building, auto-grading, lms integration, reports) and students (adaptive study resources like smartbook 2.0, readanywhere app for offline access, digital ebook, assignments).&lt;/span&gt;&lt;/li&gt;
-&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&lt;span style=&#34;font-weight: bold;&#34;&gt;istudy/support at every step:&lt;/span&gt; emphasizes flexible and intuitive tools to maximize study time and meet individual learning needs.&lt;/span&gt;&lt;/li&gt;
-&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&lt;span style=&#34;font-weight: bold;&#34;&gt;virtual labs and lab simulations:&lt;/span&gt; designed to help students learn practical and conceptual skills for online or in-person lab experiences, with adaptive pre-lab and post-lab assessments.&lt;/span&gt;&lt;/li&gt;
-&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&lt;span style=&#34;font-weight: bold;&#34;&gt;relevancy modules:&lt;/span&gt; supplementary ebooks accompanying each unit, connecting biological content to societal topics. each module includes an introductory video, scientific concepts overview, application, infographic, and discussion/assessment questions. examples include &#34;the biology of chocolate,&#34; &#34;covid-19: the rise of a global pandemic,&#34; and &#34;climate change.&#34;&lt;/span&gt;&lt;/li&gt;
-&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&lt;span style=&#34;font-weight: bold;&#34;&gt;bionow videos:&lt;/span&gt; narrated and produced by jason carlson, these videos offer a relevant, applied approach to help students relate biology to their daily lives.&lt;/span&gt;&lt;/li&gt;
-&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&lt;span style=&#34;font-weight: bold;&#34;&gt;ricochet science website:&lt;/span&gt; managed by michael windelspecht, this site (ricochetscience.com) provides updates on science news, popscience articles for classroom discussions, videos, and tutorial animations.&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;outline-element&#34; style=&#34;margin-left: 0px;&#34;&gt;&lt;p style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;&lt;ul class=&#34;list-4&#34; style=&#34;left: -10px; position: relative;&#34;&gt;&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; font-weight: bold; line-height: 17px;&#34;&gt;goals of the seventeenth edition (preface):&lt;/span&gt;&lt;ul class=&#34;list-5&#34; style=&#34;left: -10px; position: relative;&#34;&gt;&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;make content more relevant by updating chapter openers and themed readings to focus on current issues.&lt;/span&gt;&lt;/li&gt;
-&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;integrate relevancy modules.&lt;/span&gt;&lt;/li&gt;
-&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;redesign artwork for digital mobile devices.&lt;/span&gt;&lt;/li&gt;
-&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;develop a new featured reading series: &#34;the diversity of science,&#34; highlighting unrecognized scientists.&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;outline-element&#34; style=&#34;margin-left: 0px;&#34;&gt;&lt;p style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;&lt;ul class=&#34;list-6&#34; style=&#34;left: -10px; position: relative;&#34;&gt;&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&lt;span style=&#34;font-weight: bold;&#34;&gt;brief and full contents:&lt;br&gt;&lt;/span&gt;the textbook is organized into 7 units and 25 chapters, covering fundamental aspects of human biology.&lt;/span&gt;&lt;ul class=&#34;list-7&#34; style=&#34;left: -10px; position: relative;&#34;&gt;&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&lt;span style=&#34;font-weight: bold;&#34;&gt;unit 1: human organization&lt;/span&gt; (ch 1-4): exploring life and science, chemistry of life, cell structure and function, tissues, organ systems, and homeostasis.&lt;/span&gt;&lt;/li&gt;
-&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&lt;span style=&#34;font-weight: bold;&#34;&gt;unit 2: maintenance of the human body&lt;/span&gt; (ch 5-11): cardiovascular system (heart and blood vessels, blood), lymphatic and immune systems, biology of infectious diseases, digestive system and nutrition, respiratory system, urinary system.&lt;/span&gt;&lt;/li&gt;
-&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&lt;span style=&#34;font-weight: bold;&#34;&gt;unit 3: movement and support in humans&lt;/span&gt; (ch 12-13): skeletal system, muscular system.&lt;/span&gt;&lt;/li&gt;
-&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&lt;span style=&#34;font-weight: bold;&#34;&gt;unit 4: integration and coordination in humans&lt;/span&gt; (ch 14-16): nervous system, senses, endocrine system.&lt;/span&gt;&lt;/li&gt;
-&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&lt;span style=&#34;font-weight: bold;&#34;&gt;unit 5: reproduction in humans&lt;/span&gt; (ch 17-18): reproductive system, development and aging.&lt;/span&gt;&lt;/li&gt;
-&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&lt;span style=&#34;font-weight: bold;&#34;&gt;unit 6: human genetics&lt;/span&gt; (ch 19-22): cell division, cancer, genetic inheritance, dna biology and technology.&lt;/span&gt;&lt;/li&gt;
-&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&lt;span style=&#34;font-weight: bold;&#34;&gt;unit 7: human evolution and ecology&lt;/span&gt; (ch 23-25): human evolution, ecology and the nature of ecosystems, human interactions with the biosphere.&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;outline-element&#34; style=&#34;margin-left: 0px;&#34;&gt;&lt;p style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;&lt;ul class=&#34;list-8&#34; style=&#34;left: -10px; position: relative;&#34;&gt;&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&lt;span style=&#34;font-weight: bold;&#34;&gt;readings (special features):&lt;/span&gt; the book includes &#34;biology today&#34; sections categorized into diversity in science, health, and science. these provide real-world examples and deeper dives into specific topics. examples include:&lt;/span&gt;&lt;ul class=&#34;list-9&#34; style=&#34;left: -10px; position: relative;&#34;&gt;&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&lt;span style=&#34;font-weight: bold;&#34;&gt;diversity in science:&lt;/span&gt; the legacy of marie curie, nettie stevens and the discovery of the sex chromosomes.&lt;/span&gt;&lt;/li&gt;
-&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&lt;span style=&#34;font-weight: bold;&#34;&gt;health:&lt;/span&gt; fiber in the diet, good and bad cholesterol, recent findings in preventing heart disease, covid-19.&lt;/span&gt;&lt;/li&gt;
-&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&lt;span style=&#34;font-weight: bold;&#34;&gt;science:&lt;/span&gt; adapting to life at high elevations, discovering the cause of ulcers, artificial lungs, genetics of eye color, the complexity of our evolutionary past.&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;outline-element&#34; style=&#34;margin-left: 0px;&#34;&gt;&lt;p style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;&lt;ul class=&#34;list-10&#34; style=&#34;left: -10px; position: relative;&#34;&gt;&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; font-weight: bold; line-height: 17px;&#34;&gt;core concepts and themes (from chapter 1 summary):&lt;/span&gt;&lt;ul class=&#34;list-11&#34; style=&#34;left: -10px; position: relative;&#34;&gt;&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&lt;span style=&#34;font-weight: bold;&#34;&gt;characteristics of life:&lt;/span&gt; organization (atoms to biosphere), acquisition of materials and energy (metabolism, photosynthesis), reproduction and development (dna, genes, mutations), homeostasis, response to stimuli, and evolutionary history (natural selection, adaptation).&lt;/span&gt;&lt;/li&gt;
-&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&lt;span style=&#34;font-weight: bold;&#34;&gt;humans and other animals:&lt;/span&gt; humans are eukarya, kingdom animalia (primate mammals), sharing a common apelike ancestor with apes. emphasis on human cultural heritage (language, tool use, values).&lt;/span&gt;&lt;/li&gt;
-&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&lt;span style=&#34;font-weight: bold;&#34;&gt;science as a process (scientific method):&lt;/span&gt; observation, hypothesis development (inductive reasoning), hypothesis testing (experimentation, deductive reasoning, experimental/control groups, model organisms/systems), data collection and analysis (graphs, statistical significance), conclusion, and scientific publications (peer review). the concept of scientific theory (e.g., cell theory, gene theory, theory of evolution) as accepted explanations.&lt;/span&gt;&lt;/li&gt;
-&lt;li class=&#34;outline-element&#34; style=&#34;margin-left: 36px;&#34;&gt;&lt;span style=&#34;font-family: calibri; font-size: 11pt; line-height: 17px;&#34;&gt;&lt;span style=&#34;font-weight: bold;&#34;&gt;science and societal challenges:&lt;/span&gt; distinction between science and technology. key challenges include climate change (global warming, co2 emissions), biodiversity and habitat loss (extinction rates, threat to rainforests and coral reefs), and emerging/reemerging diseases (avian influenza, sars, mers, covid-19, ebola).&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;outline-element&#34; style=&#34;margin-left: 0px;&#34;&gt;&lt;cite style=&#34;color: rgb(89,89,89); font-family: calibri; font-size: 9pt; line-height: 14px;&#34;&gt;from &amp;lt;&lt;a href=&#34;https://drive.google.com/drive/my-drive&#34; style=&#34;&#34;&gt;https://drive.google.com/drive/my-drive&lt;/a&gt;&amp;gt; &lt;/cite&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-
-
-&lt;/body&gt;&lt;/html&gt;"
-                   data-tags="">
-                    <span class="note-course">
-                        
-                            General Notes
-                        
-                    </span>
-                    <div class="note-title">Human BIO Textbook</div>
-                    <div class="note-meta">Published April 24, 2026</div>
-                    <div class="note-excerpt">
-                        
-
-    
-    Human BIO Textbook
-    
-    
-    /*** Start default CSS ***/
-    * { margin: 0...
                     </div>
                 </a>
             
@@ -2131,14 +2082,21 @@
 
 
 &lt;/body&gt;&lt;/html&gt;"
-                   data-tags="">
-                    <span class="note-course">
-                        
-                            General Notes
-                        
-                    </span>
+                   data-tags=""
+                   data-class="general"
+                   data-type="note">
+                    
+                    <div class="note-labels">
+                        <span class="label-class">General</span>
+                        <span class="label-type">Note</span>
+                    </div>
+
                     <div class="note-title">ART-1231-VUO3</div>
-                    <div class="note-meta">Published April 24, 2026</div>
+                    
+                    <div class="note-meta">
+                        Session Date: April 24, 2026
+                    </div>
+
                     <div class="note-excerpt">
                         
 
@@ -2322,14 +2280,21 @@
 
 
 &lt;/body&gt;&lt;/html&gt;"
-                   data-tags="">
-                    <span class="note-course">
-                        
-                            General Notes
-                        
-                    </span>
+                   data-tags=""
+                   data-class="general"
+                   data-type="note">
+                    
+                    <div class="note-labels">
+                        <span class="label-class">General</span>
+                        <span class="label-type">Note</span>
+                    </div>
+
                     <div class="note-title">Basic &amp; Pre-Algebra</div>
-                    <div class="note-meta">Published April 24, 2026</div>
+                    
+                    <div class="note-meta">
+                        Session Date: April 24, 2026
+                    </div>
+
                     <div class="note-excerpt">
                         
 
@@ -2345,14 +2310,21 @@
                 <a href="article/ewrtr" class="note-item" 
                    data-title="ewrtr"
                    data-content="the internet is a good place to find educational work."
-                   data-tags="">
-                    <span class="note-course">
-                        
-                            General Notes
-                        
-                    </span>
+                   data-tags=""
+                   data-class="general"
+                   data-type="note">
+                    
+                    <div class="note-labels">
+                        <span class="label-class">General</span>
+                        <span class="label-type">Note</span>
+                    </div>
+
                     <div class="note-title">ewrtr</div>
-                    <div class="note-meta">Published April 23, 2026</div>
+                    
+                    <div class="note-meta">
+                        Session Date: April 23, 2026
+                    </div>
+
                     <div class="note-excerpt">
                         The internet is a good place to find educational work....
                     </div>
@@ -2428,14 +2400,21 @@ the second way to organise your notes is using tags:
 - on **mobile**, open the note and press the &#34;⋮&#34; button and select &#34;tags&#34;.
 - on **terminal**, type `:help tag` for the available commands.
 "
-                   data-tags="">
-                    <span class="note-course">
-                        
-                            General Notes
-                        
-                    </span>
+                   data-tags=""
+                   data-class="general"
+                   data-type="note">
+                    
+                    <div class="note-labels">
+                        <span class="label-class">General</span>
+                        <span class="label-type">Note</span>
+                    </div>
+
                     <div class="note-title">1. Welcome to Joplin!</div>
-                    <div class="note-meta">Published April 23, 2026</div>
+                    
+                    <div class="note-meta">
+                        Session Date: April 23, 2026
+                    </div>
+
                     <div class="note-excerpt">
                         # Welcome to Joplin!
 
@@ -2443,10 +2422,97 @@ Joplin is a free, open source note taking and to-do application, which helps you
                     </div>
                 </a>
             
+                <a href="article/human-bio-textbook-1" class="note-item" 
+                   data-title="human bio textbook"
+                   data-content="
+&lt;!-- 
+
+class: true
+type: summary
+
+--&gt;
+
+
+
+**overview**  
+this textbook offers a clear and engaging introduction to human biology, with a strong focus on how biology connects to everyday life and real-world issues. it helps students see why biology matters by linking core concepts to current challenges such as climate change, loss of biodiversity, and emerging diseases. the book also blends traditional learning with modern digital tools to support different learning styles.
+ 
+**authors and contributors**  
+the book is written and supported by experienced educators and science communicators.
+
+- **sylvia s. mader** is a nationally recognized biology textbook author. she studied at bryn mawr, harvard, tufts, and nova southeastern. she is well known for a writing style that is clear, approachable, and engaging for students.
+- **michael windelspecht** has taught introductory biology, genetics, and human genetics. he earned degrees from michigan state university and the university of south florida. his work focuses on using data from digital learning platforms to create personalized learning tools. he has written and edited more than 30 reference textbooks and manages the ricochet science website.
+- **dave cox** is a professor of biology at lincoln land community college. he teaches introductory biology, marine biology, and field-based biology courses. he has contributed to several mcgraw hill textbooks and develops educational materials related to ecotourism.
+ 
+**digital learning tools and student support**  
+the textbook is supported by a wide range of digital resources designed to help both instructors and students.
+
+- **mcgraw hill connect** provides tools for instructors such as course design, automatic grading, learning management system integration, and performance reports. students have access to adaptive study tools like smartbook 2.0, a read anywhere app for offline use, a digital textbook, and online assignments.
+- **istudy and support at every step** focuses on flexible and easy-to-use tools that help students make the most of their study time and learn at their own pace.
+- **virtual labs and lab simulations** allow students to build hands-on skills in both online and in-person lab settings. these labs include adaptive assessments before and after lab activities.
+- **relevancy modules** are short companion ebooks included with each unit. they connect biology topics to social and global issues. each module includes an introductory video, an explanation of key scientific ideas, real-world applications, an infographic, and discussion or assessment questions. examples include the biology of chocolate, covid-19: the rise of a global pandemic, and climate change.
+- **bionow videos**, narrated and produced by jason carlson, help students see how biology applies to daily life through real-world examples.
+- **the ricochet science website**, managed by michael windelspecht, shares current science news, pop science articles for class discussion, videos, and tutorial animations.  
+**goals of the seventeenth edition**  
+the seventeenth edition was designed with student relevance and digital learning in mind. key goals include:
+
+- updating chapter openers and themed readings to focus on current and timely issues
+- integrating relevancy modules throughout the text
+- redesigning artwork so it works well on mobile and digital devices
+- introducing a new featured reading series called _the diversity of science_, which highlights scientists whose contributions are often overlooked  
+**organization of the textbook**  
+the book is divided into seven units and 25 chapters, covering the major areas of human biology.
+
+- **unit 1: human organization (chapters 1–4)****￼**life and science, chemistry of life, cell structure and function, tissues, organ systems, and homeostasis
+- **unit 2: maintenance of the human body (chapters 5–11)****￼**the cardiovascular system, blood, lymphatic and immune systems, infectious diseases, digestion and nutrition, respiration, and the urinary system
+- **unit 3: movement and support in humans (chapters 12–13)****￼**the skeletal and muscular systems
+- **unit 4: integration and coordination in humans (chapters 14–16)****￼**the nervous system, the senses, and the endocrine system
+- **unit 5: reproduction in humans (chapters 17–18)****￼**the reproductive system, development, and aging
+- **unit 6: human genetics (chapters 19–22)****￼**cell division, cancer, genetic inheritance, and dna biology and technology
+- **unit 7: human evolution and ecology (chapters 23–25)****￼**human evolution, ecosystems, and human interactions with the biosphere  
+**special readings and features**  
+throughout the book, _biology today_ sections explore real-world topics and provide deeper insight. these readings are grouped into three areas.
+
+- **diversity in science**, including topics such as the legacy of marie curie and nettie stevens’ discovery of sex chromosomes
+- **health**, with readings on fiber in the diet, cholesterol, heart disease prevention, and covid-19
+- **science**, covering topics like high-altitude adaptation, the discovery of the cause of ulcers, artificial lungs, eye color genetics, and human evolutionary history  
+**core concepts and themes**  
+chapter 1 introduces the major ideas that guide the entire book.
+
+- **characteristics of life**, including levels of organization from atoms to the biosphere, how organisms obtain energy, reproduction and development through dna and genes, homeostasis, responses to stimuli, and evolution through natural selection and adaptation
+- **humans and other animals**, emphasizing that humans belong to the domain eukarya and kingdom animalia. humans share a common ancestor with other primates and are shaped by culture, language, tools, and values
+- **science as a process**, explaining how scientists make observations, form hypotheses, test ideas through experiments, analyze data, and share results through peer-reviewed publications. scientific theories such as cell theory, gene theory, and evolution are presented as well-supported explanations
+- **science and societal challenges**, highlighting the difference between science and technology and focusing on issues such as climate change, habitat loss, declining biodiversity, and emerging or reemerging diseases including covid-19, ebola, sars, and mers"
+                   data-tags=""
+                   data-class="true"
+                   data-type="summary">
+                    
+                    <div class="note-labels">
+                        <span class="label-class">true</span>
+                        <span class="label-type">Summary</span>
+                    </div>
+
+                    <div class="note-title">Human BIO Textbook</div>
+                    
+                    <div class="note-meta">
+                        Session Date: September 6, 2025
+                    </div>
+
+                    <div class="note-excerpt">
+                        
+
+
+
+
+**Overview**  
+This textbook offers a clear and engaging introduction to human biology, with a strong focus on how bio...
+                    </div>
+                </a>
+            
         </div>
 
         <footer>
-            Built with Joplin Pages Publisher. Updated 2026-04-24
+            University Note Repository. Updated 2026-04-24
         </footer>
     </div>
 
@@ -2470,7 +2536,11 @@ Joplin is a free, open source note taking and to-do application, which helps you
                 const title = item.getAttribute('data-title');
                 const content = item.getAttribute('data-content');
                 const tags = item.getAttribute('data-tags');
-                item.style.display = (title.includes(query) || content.includes(query) || tags.includes(query)) ? 'block' : 'none';
+                const cls = item.getAttribute('data-class');
+                const typ = item.getAttribute('data-type');
+                
+                const matches = title.includes(query) || content.includes(query) || tags.includes(query) || cls.includes(query) || typ.includes(query);
+                item.style.display = matches ? 'block' : 'none';
             });
         });
     </script>

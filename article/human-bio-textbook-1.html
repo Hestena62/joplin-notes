@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human BIO Textbook</title>
+    <style>
+        :root {
+            --bg: #f9f9f9;
+            --paper: #fff;
+            --text: #333;
+            --text-light: #666;
+            --border: #ddd;
+            --accent: #800000;
+            --code-bg: #f4f4f4;
+            --tag-bg: #f0f0f0;
+        }
+
+        [data-theme="dark"] {
+            --bg: #1a1a1a;
+            --paper: #242424;
+            --text: #e0e0e0;
+            --text-light: #aaa;
+            --border: #444;
+            --accent: #ff4d4d;
+            --code-bg: #333;
+            --tag-bg: #2d2d2d;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.8;
+            color: var(--text);
+            background: var(--bg);
+            margin: 0;
+            padding: 0;
+            transition: background 0.2s;
+        }
+
+        .wrapper {
+            max-width: 750px;
+            margin: 40px auto;
+            padding: 50px;
+            background: var(--paper);
+            border: 1px solid var(--border);
+        }
+
+        .toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            font-size: 12px;
+            color: var(--text-light);
+            font-family: sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .toolbar a { color: var(--text-light); text-decoration: none; }
+        .controls { display: flex; gap: 8px; }
+        .btn { background: none; border: 1px solid var(--border); color: var(--text); cursor: pointer; padding: 3px 10px; font-size: 10px; border-radius: 2px; }
+
+        .article-header { margin-bottom: 50px; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+        .course-label { font-family: sans-serif; color: var(--accent); font-weight: 600; font-size: 12px; margin-bottom: 10px; display: block; text-transform: uppercase; }
+        
+        h1 { font-size: 36px; margin: 0 0 15px 0; line-height: 1.1; font-weight: normal; color: var(--text); }
+        
+        .article-meta-info { 
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            font-size: 12px;
+            color: var(--text-light);
+            font-family: sans-serif;
+        }
+        .meta-item span { display: block; font-weight: 600; color: var(--text); margin-bottom: 2px; text-transform: uppercase; font-size: 10px; }
+
+        .article-content { font-size: 18px; }
+        .article-content.small { font-size: 15px; }
+        .article-content.large { font-size: 22px; }
+
+        .article-content img { max-width: 100%; height: auto; display: block; margin: 30px auto; border: 1px solid var(--border); }
+        .article-content pre { background: var(--code-bg); padding: 20px; overflow-x: auto; font-family: monospace; font-size: 14px; border: 1px solid var(--border); margin: 30px 0; }
+        .article-content h2 { margin-top: 50px; font-size: 24px; font-weight: normal; border-bottom: 1px solid var(--border); padding-bottom: 5px; }
+        
+        .tags-section { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); }
+        .tag-pill { background: var(--tag-bg); padding: 4px 10px; font-size: 11px; margin-right: 8px; color: var(--text-light); font-family: sans-serif; border-radius: 2px; text-decoration: none; }
+        
+        footer { text-align: center; margin-top: 60px; color: var(--text-light); font-size: 11px; font-family: sans-serif; }
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="toolbar">
+            <a href="/index">← Back to Overview</a>
+            <div class="controls">
+                <button class="btn" onclick="setFont('small')">A-</button>
+                <button class="btn" onclick="setFont('normal')">A</button>
+                <button class="btn" onclick="setFont('large')">A+</button>
+                <button class="btn" id="theme-btn">Contrast</button>
+            </div>
+        </div>
+        
+        <header class="article-header">
+            <span class="course-label">true</span>
+            <h1>Human BIO Textbook</h1>
+            
+            <div class="article-meta-info">
+                <div class="meta-item">
+                    <span>Session Date</span>
+                    September 6th, 2025
+                </div>
+                <div class="meta-item">
+                    <span>Doc Type</span>
+                    Summary
+                </div>
+                <div class="meta-item">
+                    <span>Read Time</span>
+                    
+                    5 min
+                </div>
+            </div>
+        </header>
+
+        <div class="article-content" id="note-body">
+            
+<p><strong>Overview</strong><br />
+This textbook offers a clear and engaging introduction to human biology, with a strong focus on how biology connects to everyday life and real-world issues. It helps students see why biology matters by linking core concepts to current challenges such as climate change, loss of biodiversity, and emerging diseases. The book also blends traditional learning with modern digital tools to support different learning styles.</p>
+<p><strong>Authors and Contributors</strong><br />
+The book is written and supported by experienced educators and science communicators.</p>
+<ul>
+<li><strong>Sylvia S. Mader</strong> is a nationally recognized biology textbook author. She studied at Bryn Mawr, Harvard, Tufts, and Nova Southeastern. She is well known for a writing style that is clear, approachable, and engaging for students.</li>
+<li><strong>Michael Windelspecht</strong> has taught introductory biology, genetics, and human genetics. He earned degrees from Michigan State University and the University of South Florida. His work focuses on using data from digital learning platforms to create personalized learning tools. He has written and edited more than 30 reference textbooks and manages the Ricochet Science website.</li>
+<li><strong>Dave Cox</strong> is a professor of biology at Lincoln Land Community College. He teaches introductory biology, marine biology, and field-based biology courses. He has contributed to several McGraw Hill textbooks and develops educational materials related to ecotourism.</li>
+</ul>
+<p><strong>Digital Learning Tools and Student Support</strong><br />
+The textbook is supported by a wide range of digital resources designed to help both instructors and students.</p>
+<ul>
+<li>
+<p><strong>McGraw Hill Connect</strong> provides tools for instructors such as course design, automatic grading, learning management system integration, and performance reports. Students have access to adaptive study tools like SmartBook 2.0, a Read Anywhere app for offline use, a digital textbook, and online assignments.</p>
+</li>
+<li>
+<p><strong>iStudy and support at every step</strong> focuses on flexible and easy-to-use tools that help students make the most of their study time and learn at their own pace.</p>
+</li>
+<li>
+<p><strong>Virtual labs and lab simulations</strong> allow students to build hands-on skills in both online and in-person lab settings. These labs include adaptive assessments before and after lab activities.</p>
+</li>
+<li>
+<p><strong>Relevancy Modules</strong> are short companion eBooks included with each unit. They connect biology topics to social and global issues. Each module includes an introductory video, an explanation of key scientific ideas, real-world applications, an infographic, and discussion or assessment questions. Examples include The Biology of Chocolate, COVID-19: The Rise of a Global Pandemic, and Climate Change.</p>
+</li>
+<li>
+<p><strong>BioNOW videos</strong>, narrated and produced by Jason Carlson, help students see how biology applies to daily life through real-world examples.</p>
+</li>
+<li>
+<p><strong>The Ricochet Science website</strong>, managed by Michael Windelspecht, shares current science news, pop science articles for class discussion, videos, and tutorial animations.<br />
+<strong>Goals of the Seventeenth Edition</strong><br />
+The seventeenth edition was designed with student relevance and digital learning in mind. Key goals include:</p>
+</li>
+<li>
+<p>Updating chapter openers and themed readings to focus on current and timely issues</p>
+</li>
+<li>
+<p>Integrating relevancy modules throughout the text</p>
+</li>
+<li>
+<p>Redesigning artwork so it works well on mobile and digital devices</p>
+</li>
+<li>
+<p>Introducing a new featured reading series called <em>The Diversity of Science</em>, which highlights scientists whose contributions are often overlooked<br />
+<strong>Organization of the Textbook</strong><br />
+The book is divided into seven units and 25 chapters, covering the major areas of human biology.</p>
+</li>
+<li>
+<p><strong>Unit 1: Human Organization (Chapters 1–4)****￼</strong>Life and science, chemistry of life, cell structure and function, tissues, organ systems, and homeostasis</p>
+</li>
+<li>
+<p><strong>Unit 2: Maintenance of the Human Body (Chapters 5–11)****￼</strong>The cardiovascular system, blood, lymphatic and immune systems, infectious diseases, digestion and nutrition, respiration, and the urinary system</p>
+</li>
+<li>
+<p><strong>Unit 3: Movement and Support in Humans (Chapters 12–13)****￼</strong>The skeletal and muscular systems</p>
+</li>
+<li>
+<p><strong>Unit 4: Integration and Coordination in Humans (Chapters 14–16)****￼</strong>The nervous system, the senses, and the endocrine system</p>
+</li>
+<li>
+<p><strong>Unit 5: Reproduction in Humans (Chapters 17–18)****￼</strong>The reproductive system, development, and aging</p>
+</li>
+<li>
+<p><strong>Unit 6: Human Genetics (Chapters 19–22)****￼</strong>Cell division, cancer, genetic inheritance, and DNA biology and technology</p>
+</li>
+<li>
+<p><strong>Unit 7: Human Evolution and Ecology (Chapters 23–25)****￼</strong>Human evolution, ecosystems, and human interactions with the biosphere<br />
+<strong>Special Readings and Features</strong><br />
+Throughout the book, <em>Biology Today</em> sections explore real-world topics and provide deeper insight. These readings are grouped into three areas.</p>
+</li>
+<li>
+<p><strong>Diversity in Science</strong>, including topics such as the legacy of Marie Curie and Nettie Stevens’ discovery of sex chromosomes</p>
+</li>
+<li>
+<p><strong>Health</strong>, with readings on fiber in the diet, cholesterol, heart disease prevention, and COVID-19</p>
+</li>
+<li>
+<p><strong>Science</strong>, covering topics like high-altitude adaptation, the discovery of the cause of ulcers, artificial lungs, eye color genetics, and human evolutionary history<br />
+<strong>Core Concepts and Themes</strong><br />
+Chapter 1 introduces the major ideas that guide the entire book.</p>
+</li>
+<li>
+<p><strong>Characteristics of life</strong>, including levels of organization from atoms to the biosphere, how organisms obtain energy, reproduction and development through DNA and genes, homeostasis, responses to stimuli, and evolution through natural selection and adaptation</p>
+</li>
+<li>
+<p><strong>Humans and other animals</strong>, emphasizing that humans belong to the domain Eukarya and kingdom Animalia. Humans share a common ancestor with other primates and are shaped by culture, language, tools, and values</p>
+</li>
+<li>
+<p><strong>Science as a process</strong>, explaining how scientists make observations, form hypotheses, test ideas through experiments, analyze data, and share results through peer-reviewed publications. Scientific theories such as cell theory, gene theory, and evolution are presented as well-supported explanations</p>
+</li>
+<li>
+<p><strong>Science and societal challenges</strong>, highlighting the difference between science and technology and focusing on issues such as climate change, habitat loss, declining biodiversity, and emerging or reemerging diseases including COVID-19, Ebola, SARS, and MERS</p>
+</li>
+</ul>
+
+        </div>
+
+        <div class="tags-section">
+            
+        </div>
+
+        <footer>
+            Academic document shared from personal archive
+        </footer>
+    </div>
+
+    <script>
+        const btn = document.getElementById('theme-btn');
+        const storedTheme = localStorage.getItem('theme');
+        if (storedTheme) {
+            document.documentElement.setAttribute('data-theme', storedTheme);
+        }
+        btn.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+        });
+
+        function setFont(size) {
+            const body = document.getElementById('note-body');
+            body.classList.remove('small', 'large');
+            if (size === 'small') body.classList.add('small');
+            if (size === 'large') body.classList.add('large');
+        }
+    </script>
+</body>
+</html>
