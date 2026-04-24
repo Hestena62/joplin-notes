@@ -3,38 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Joplin Site</title>
+    <title>My Notes - Notion Style</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
-        header { border-bottom: 1px solid #eee; margin-bottom: 40px; }
-        .article-link { display: block; margin-bottom: 20px; text-decoration: none; color: #007bff; }
-        .article-link:hover { text-decoration: underline; }
-        .date { font-size: 0.8rem; color: #666; }
+        :root {
+            --bg: #191919;
+            --sidebar-bg: #202020;
+            --text: #efefef;
+            --text-muted: #9b9b9b;
+            --hover: #2c2c2c;
+            --accent: #2383e2;
+            --border: #2f2f2f;
+        }
+        
+        * { box-sizing: border-box; }
+        
+        body { 
+            background: var(--bg);
+            color: var(--text);
+            font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+            margin: 0;
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar */
+        aside {
+            width: 240px;
+            background: var(--sidebar-bg);
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            padding: 12px;
+            flex-shrink: 0;
+        }
+
+        .sidebar-header {
+            padding: 8px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-item {
+            padding: 4px 8px;
+            border-radius: 4px;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 2px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-item:hover { background: var(--hover); }
+
+        /* Main Content */
+        main {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 40px 60px;
+        }
+
+        .content-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .page-title {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 32px;
+        }
+
+        /* Search Section */
+        .search-container {
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        #search-input {
+            width: 100%;
+            background: var(--hover);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 8px 12px;
+            color: var(--text);
+            font-size: 14px;
+            outline: none;
+        }
+
+        #search-input:focus {
+            border-color: var(--accent);
+        }
+
+        /* Article List */
+        .article-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-row {
+            padding: 8px;
+            border-radius: 4px;
+            text-decoration: none;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            transition: background 0.1s;
+        }
+
+        .article-row:hover { background: var(--hover); }
+
+        .article-row span { margin-right: 12px; font-size: 18px; }
+
+        .article-info { display: flex; flex-direction: column; }
+
+        .article-title { font-weight: 500; font-size: 16px; }
+
+        .article-date { font-size: 12px; color: var(--text-muted); }
+
+        footer {
+            margin-top: 100px;
+            padding-bottom: 40px;
+            font-size: 12px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            body { flex-direction: column; }
+            aside { width: 100%; height: auto; }
+            main { padding: 20px; }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Notes</h1>
+    <aside>
+        <div class="sidebar-header">
+            <span style="margin-right: 8px;">📓</span> My Workspace
+        </div>
         <nav>
-            <a href="/index">Home</a> | 
-            <a href="/archives">Archives</a> | 
-            <a href="/about">About</a>
+            <a href="/index" class="nav-item">🏠 Home</a>
+            <a href="/archives" class="nav-item">🗄️ Archives</a>
+            <a href="/about" class="nav-item">👤 About</a>
         </nav>
-    </header>
+    </aside>
 
     <main>
-        
-            <div class="article-item">
-                <a class="article-link" href="article/ewrtr">
-                    <h2>ewrtr</h2>
-                </a>
-                <p class="date">Published: April 23rd 2026</p>
+        <div class="content-container">
+            <h1 class="page-title">Personal Notes</h1>
+            
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search notes by title or content...">
             </div>
-        
+
+            <div class="article-list" id="article-list">
+                
+                    <a class="article-row" href="article/ewrtr" 
+                       data-title="ewrtr"
+                       data-content="the internet is a good place to find educational work.">
+                        <span>📄</span>
+                        <div class="article-info">
+                            <div class="article-title">ewrtr</div>
+                            <div class="article-date">Apr 23, 2026</div>
+                        </div>
+                    </a>
+                
+            </div>
+
+            <footer>
+                Site generated at 2026-04-24 01:31
+            </footer>
+        </div>
     </main>
 
-    <footer>
-        <p>Site generated at: 2026-04-24 01:26</p>
-    </footer>
+    <script>
+        const searchInput = document.getElementById('search-input');
+        const articleRows = document.querySelectorAll('.article-row');
+
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            
+            articleRows.forEach(row => {
+                const title = row.getAttribute('data-title');
+                const content = row.getAttribute('data-content');
+                
+                if (title.includes(query) || content.includes(query)) {
+                    row.style.display = 'flex';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
