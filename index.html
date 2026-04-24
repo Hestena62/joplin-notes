@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Note Share</title>
+    <title>Lecture Notes Archive</title>
     <style>
         :root {
             --bg: #f9f9f9;
             --paper: #fff;
             --text: #333;
-            --text-light: #777;
-            --border: #eee;
-            --accent: #d32f2f;
+            --text-light: #666;
+            --border: #ddd;
+            --accent: #800000;
             --input-bg: #fff;
         }
 
         [data-theme="dark"] {
-            --bg: #121212;
-            --paper: #1e1e1e;
-            --text: #ddd;
-            --text-light: #999;
-            --border: #333;
-            --accent: #ff5252;
-            --input-bg: #2a2a2a;
+            --bg: #1a1a1a;
+            --paper: #242424;
+            --text: #e0e0e0;
+            --text-light: #aaa;
+            --border: #444;
+            --accent: #ff4d4d;
+            --input-bg: #333;
         }
 
         body {
@@ -32,22 +32,22 @@
             background: var(--bg);
             margin: 0;
             padding: 0;
-            transition: background 0.3s, color 0.3s;
+            transition: background 0.2s, color 0.2s;
         }
 
         .wrapper {
-            max-width: 700px;
+            max-width: 750px;
             margin: 40px auto;
-            padding: 0 20px;
+            padding: 0 30px;
             background: var(--paper);
             border: 1px solid var(--border);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            min-height: 90vh;
         }
 
         header {
-            padding: 40px 0;
-            text-align: center;
-            border-bottom: 1px solid var(--border);
+            padding: 50px 0 30px;
+            text-align: left;
+            border-bottom: 2px solid var(--accent);
             position: relative;
         }
 
@@ -58,66 +58,77 @@
             background: none;
             border: 1px solid var(--border);
             color: var(--text);
-            padding: 5px 10px;
+            padding: 4px 12px;
             cursor: pointer;
-            font-size: 12px;
+            font-size: 11px;
             font-family: sans-serif;
+            text-transform: uppercase;
         }
 
-        h1 { margin: 0; font-size: 28px; font-weight: normal; }
+        h1 { margin: 0; font-size: 32px; font-weight: normal; letter-spacing: -0.5px; }
+        .sub-head { color: var(--text-light); font-size: 14px; margin-top: 5px; font-style: italic; }
 
-        nav { margin-top: 15px; }
-        nav a { color: var(--text-light); text-decoration: none; margin: 0 10px; font-size: 14px; }
-        nav a:hover { color: var(--text); }
+        nav { margin-top: 20px; font-family: sans-serif; text-transform: uppercase; letter-spacing: 1px; }
+        nav a { color: var(--text-light); text-decoration: none; margin-right: 20px; font-size: 12px; }
+        nav a:hover { color: var(--accent); }
 
-        .search-area { padding: 20px 0; border-bottom: 1px solid var(--border); }
+        .search-area { padding: 25px 0; border-bottom: 1px solid var(--border); }
         #search-input {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             border: 1px solid var(--border);
             background: var(--input-bg);
             color: var(--text);
             font-family: inherit;
             box-sizing: border-box;
+            border-radius: 2px;
         }
 
-        .posts { padding: 20px 0; }
-        .post-item { margin-bottom: 30px; display: block; text-decoration: none; color: inherit; }
-        .post-title { font-size: 20px; color: var(--accent); margin-bottom: 5px; }
-        .post-item:hover .post-title { text-decoration: underline; }
-        .post-meta { font-size: 12px; color: var(--text-light); margin-bottom: 10px; }
-        .post-excerpt { font-size: 15px; color: var(--text-light); }
+        .note-list { padding: 30px 0; }
+        .note-item { margin-bottom: 35px; display: block; text-decoration: none; color: inherit; }
+        .note-course { font-family: sans-serif; font-size: 11px; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 5px; }
+        .note-title { font-size: 22px; color: var(--text); margin-bottom: 8px; line-height: 1.2; }
+        .note-item:hover .note-title { color: var(--accent); text-decoration: underline; }
+        .note-meta { font-size: 12px; color: var(--text-light); margin-bottom: 12px; font-family: sans-serif; }
+        .note-excerpt { font-size: 15px; color: var(--text-light); line-height: 1.5; }
 
-        footer { text-align: center; padding: 40px 0; color: var(--text-light); font-size: 12px; }
+        footer { text-align: center; padding: 50px 0; color: var(--text-light); font-size: 11px; font-family: sans-serif; border-top: 1px solid var(--border); }
     </style>
 </head>
 <body>
     <div class="wrapper">
         <header>
-            <button class="theme-toggle" id="theme-btn">Theme</button>
-            <h1>My Shared Notes</h1>
+            <button class="theme-toggle" id="theme-btn">Toggle Theme</button>
+            <h1>Academic Journal</h1>
+            <div class="sub-head">Personal class notes and lecture summaries</div>
             <nav>
-                <a href="/index">Home</a>
-                <a href="/archives">Archives</a>
+                <a href="/index">Notes</a>
+                <a href="/archives">Timeline</a>
                 <a href="/about">About</a>
             </nav>
         </header>
 
         <div class="search-area">
-            <input type="text" id="search-input" placeholder="Search notes...">
+            <input type="text" id="search-input" placeholder="Search by topic, course, or keyword...">
         </div>
 
-        <div class="posts" id="post-container">
+        <div class="note-list" id="note-container">
             
-                <a href="article/master" class="post-item" 
+                <a href="article/master" class="note-item" 
                    data-title="master"
                    data-content=" master 
 
 - [important info](:/4f02427961b545288a7b0d40607af65a &#34;important info&#34;)
-- [week 00](:/4c7a51085dae4e7f8a1a46b8a02a2e3e &#34;week 00&#34;)">
-                    <div class="post-title">Master</div>
-                    <div class="post-meta">Posted on 2026-04-24</div>
-                    <div class="post-excerpt">
+- [week 00](:/4c7a51085dae4e7f8a1a46b8a02a2e3e &#34;week 00&#34;)"
+                   data-tags="">
+                    <span class="note-course">
+                        
+                            General Notes
+                        
+                    </span>
+                    <div class="note-title">Master</div>
+                    <div class="note-meta">Published April 24, 2026</div>
+                    <div class="note-excerpt">
                          Master 
 
 - [Important Info](:/4f02427961b545288a7b0d40607af65a &#34;Important Info&#34;)
@@ -125,7 +136,7 @@
                     </div>
                 </a>
             
-                <a href="article/readings-and-materials" class="post-item" 
+                <a href="article/readings-and-materials" class="note-item" 
                    data-title="readings and materials"
                    data-content="&lt;!doctype html&gt;
 &lt;html&gt;&lt;head&gt;
@@ -190,10 +201,16 @@
 
 
 
-&lt;/body&gt;&lt;/html&gt;">
-                    <div class="post-title">Readings and Materials</div>
-                    <div class="post-meta">Posted on 2026-04-24</div>
-                    <div class="post-excerpt">
+&lt;/body&gt;&lt;/html&gt;"
+                   data-tags="">
+                    <span class="note-course">
+                        
+                            General Notes
+                        
+                    </span>
+                    <div class="note-title">Readings and Materials</div>
+                    <div class="note-meta">Published April 24, 2026</div>
+                    <div class="note-excerpt">
                         
 
     
@@ -201,11 +218,11 @@
     
     
     /*** Start default CSS ***/
-    * { margin: 0; padding: 0; fo...
+    * { margi...
                     </div>
                 </a>
             
-                <a href="article/how-the-course-will-work" class="post-item" 
+                <a href="article/how-the-course-will-work" class="note-item" 
                    data-title="how the course will work"
                    data-content="&lt;!doctype html&gt;
 &lt;html&gt;&lt;head&gt;
@@ -428,10 +445,16 @@
 
 
 
-&lt;/body&gt;&lt;/html&gt;">
-                    <div class="post-title">How the course will work</div>
-                    <div class="post-meta">Posted on 2026-04-24</div>
-                    <div class="post-excerpt">
+&lt;/body&gt;&lt;/html&gt;"
+                   data-tags="">
+                    <span class="note-course">
+                        
+                            General Notes
+                        
+                    </span>
+                    <div class="note-title">How the course will work</div>
+                    <div class="note-meta">Published April 24, 2026</div>
+                    <div class="note-excerpt">
                         
 
     
@@ -439,11 +462,11 @@
     
     
     /*** Start default CSS ***/
-    * { margin: 0; padding: 0; ...
+    * { mar...
                     </div>
                 </a>
             
-                <a href="article/study-doc" class="post-item" 
+                <a href="article/study-doc" class="note-item" 
                    data-title="study doc"
                    data-content="&lt;!doctype html&gt;
 &lt;html&gt;&lt;head&gt;
@@ -608,10 +631,16 @@
 
 
 
-&lt;/body&gt;&lt;/html&gt;">
-                    <div class="post-title">Study Doc</div>
-                    <div class="post-meta">Posted on 2026-04-24</div>
-                    <div class="post-excerpt">
+&lt;/body&gt;&lt;/html&gt;"
+                   data-tags="">
+                    <span class="note-course">
+                        
+                            General Notes
+                        
+                    </span>
+                    <div class="note-title">Study Doc</div>
+                    <div class="note-meta">Published April 24, 2026</div>
+                    <div class="note-excerpt">
                         
 
     
@@ -619,11 +648,11 @@
     
     
     /*** Start default CSS ***/
-    * { margin: 0; padding: 0; font-weight: no...
+    * { margin: 0; padding...
                     </div>
                 </a>
             
-                <a href="article/study-guide_1" class="post-item" 
+                <a href="article/study-guide_1" class="note-item" 
                    data-title="study guide_1"
                    data-content="&lt;!doctype html&gt;
 &lt;html&gt;&lt;head&gt;
@@ -847,10 +876,16 @@
 
 
 
-&lt;/body&gt;&lt;/html&gt;">
-                    <div class="post-title">Study Guide_1</div>
-                    <div class="post-meta">Posted on 2026-04-24</div>
-                    <div class="post-excerpt">
+&lt;/body&gt;&lt;/html&gt;"
+                   data-tags="">
+                    <span class="note-course">
+                        
+                            General Notes
+                        
+                    </span>
+                    <div class="note-title">Study Guide_1</div>
+                    <div class="note-meta">Published April 24, 2026</div>
+                    <div class="note-excerpt">
                         
 
     
@@ -858,11 +893,11 @@
     
     
     /*** Start default CSS ***/
-    * { margin: 0; padding: 0; font-weight: ...
+    * { margin: 0; paddi...
                     </div>
                 </a>
             
-                <a href="article/briefing-doc" class="post-item" 
+                <a href="article/briefing-doc" class="note-item" 
                    data-title="briefing doc"
                    data-content="&lt;!doctype html&gt;
 &lt;html&gt;&lt;head&gt;
@@ -1145,10 +1180,16 @@
 
 
 
-&lt;/body&gt;&lt;/html&gt;">
-                    <div class="post-title">Briefing Doc</div>
-                    <div class="post-meta">Posted on 2026-04-24</div>
-                    <div class="post-excerpt">
+&lt;/body&gt;&lt;/html&gt;"
+                   data-tags="">
+                    <span class="note-course">
+                        
+                            General Notes
+                        
+                    </span>
+                    <div class="note-title">Briefing Doc</div>
+                    <div class="note-meta">Published April 24, 2026</div>
+                    <div class="note-excerpt">
                         
 
     
@@ -1156,11 +1197,11 @@
     
     
     /*** Start default CSS ***/
-    * { margin: 0; padding: 0; font-weight:...
+    * { margin: 0; padd...
                     </div>
                 </a>
             
-                <a href="article/briefing-document" class="post-item" 
+                <a href="article/briefing-document" class="note-item" 
                    data-title="briefing document"
                    data-content="&lt;!doctype html&gt;
 &lt;html&gt;&lt;head&gt;
@@ -1364,10 +1405,16 @@
 
 
 
-&lt;/body&gt;&lt;/html&gt;">
-                    <div class="post-title">Briefing Document</div>
-                    <div class="post-meta">Posted on 2026-04-24</div>
-                    <div class="post-excerpt">
+&lt;/body&gt;&lt;/html&gt;"
+                   data-tags="">
+                    <span class="note-course">
+                        
+                            General Notes
+                        
+                    </span>
+                    <div class="note-title">Briefing Document</div>
+                    <div class="note-meta">Published April 24, 2026</div>
+                    <div class="note-excerpt">
                         
 
     
@@ -1375,11 +1422,11 @@
     
     
     /*** Start default CSS ***/
-    * { margin: 0; padding: 0; font-we...
+    * { margin: 0;...
                     </div>
                 </a>
             
-                <a href="article/study-guide" class="post-item" 
+                <a href="article/study-guide" class="note-item" 
                    data-title="study guide"
                    data-content="&lt;!doctype html&gt;
 &lt;html&gt;&lt;head&gt;
@@ -1573,10 +1620,16 @@
 
 
 
-&lt;/body&gt;&lt;/html&gt;">
-                    <div class="post-title">Study Guide</div>
-                    <div class="post-meta">Posted on 2026-04-24</div>
-                    <div class="post-excerpt">
+&lt;/body&gt;&lt;/html&gt;"
+                   data-tags="">
+                    <span class="note-course">
+                        
+                            General Notes
+                        
+                    </span>
+                    <div class="note-title">Study Guide</div>
+                    <div class="note-meta">Published April 24, 2026</div>
+                    <div class="note-excerpt">
                         
 
     
@@ -1584,11 +1637,11 @@
     
     
     /*** Start default CSS ***/
-    * { margin: 0; padding: 0; font-weight: ...
+    * { margin: 0; paddi...
                     </div>
                 </a>
             
-                <a href="article/5-text" class="post-item" 
+                <a href="article/5-text" class="note-item" 
                    data-title="5 text"
                    data-content="&lt;!doctype html&gt;
 &lt;html&gt;&lt;head&gt;
@@ -1685,10 +1738,16 @@
 
 
 
-&lt;/body&gt;&lt;/html&gt;">
-                    <div class="post-title">5 Text</div>
-                    <div class="post-meta">Posted on 2026-04-24</div>
-                    <div class="post-excerpt">
+&lt;/body&gt;&lt;/html&gt;"
+                   data-tags="">
+                    <span class="note-course">
+                        
+                            General Notes
+                        
+                    </span>
+                    <div class="note-title">5 Text</div>
+                    <div class="note-meta">Published April 24, 2026</div>
+                    <div class="note-excerpt">
                         
 
     
@@ -1696,11 +1755,11 @@
     
     
     /*** Start default CSS ***/
-    * { margin: 0; padding: 0; font-weight: norma...
+    * { margin: 0; padding: 0...
                     </div>
                 </a>
             
-                <a href="article/book-outline" class="post-item" 
+                <a href="article/book-outline" class="note-item" 
                    data-title="book outline"
                    data-content="&lt;!doctype html&gt;
 &lt;html&gt;&lt;head&gt;
@@ -1834,10 +1893,16 @@
 
 
 
-&lt;/body&gt;&lt;/html&gt;">
-                    <div class="post-title">Book Outline</div>
-                    <div class="post-meta">Posted on 2026-04-24</div>
-                    <div class="post-excerpt">
+&lt;/body&gt;&lt;/html&gt;"
+                   data-tags="">
+                    <span class="note-course">
+                        
+                            General Notes
+                        
+                    </span>
+                    <div class="note-title">Book Outline</div>
+                    <div class="note-meta">Published April 24, 2026</div>
+                    <div class="note-excerpt">
                         
 
     
@@ -1845,11 +1910,11 @@
     
     
     /*** Start default CSS ***/
-    * { margin: 0; padding: 0; font-weight:...
+    * { margin: 0; padd...
                     </div>
                 </a>
             
-                <a href="article/human-bio-textbook" class="post-item" 
+                <a href="article/human-bio-textbook" class="note-item" 
                    data-title="human bio textbook"
                    data-content="&lt;!doctype html&gt;
 &lt;html&gt;&lt;head&gt;
@@ -1971,10 +2036,16 @@
 
 
 
-&lt;/body&gt;&lt;/html&gt;">
-                    <div class="post-title">Human BIO Textbook</div>
-                    <div class="post-meta">Posted on 2026-04-24</div>
-                    <div class="post-excerpt">
+&lt;/body&gt;&lt;/html&gt;"
+                   data-tags="">
+                    <span class="note-course">
+                        
+                            General Notes
+                        
+                    </span>
+                    <div class="note-title">Human BIO Textbook</div>
+                    <div class="note-meta">Published April 24, 2026</div>
+                    <div class="note-excerpt">
                         
 
     
@@ -1982,11 +2053,11 @@
     
     
     /*** Start default CSS ***/
-    * { margin: 0; padding: 0; font-w...
+    * { margin: 0...
                     </div>
                 </a>
             
-                <a href="article/art-1231-vuo3" class="post-item" 
+                <a href="article/art-1231-vuo3" class="note-item" 
                    data-title="art-1231-vuo3"
                    data-content="&lt;!doctype html&gt;
 &lt;html lang=&#34;en&#34;&gt;&lt;head&gt;
@@ -2059,10 +2130,16 @@
 
 
 
-&lt;/body&gt;&lt;/html&gt;">
-                    <div class="post-title">ART-1231-VUO3</div>
-                    <div class="post-meta">Posted on 2026-04-24</div>
-                    <div class="post-excerpt">
+&lt;/body&gt;&lt;/html&gt;"
+                   data-tags="">
+                    <span class="note-course">
+                        
+                            General Notes
+                        
+                    </span>
+                    <div class="note-title">ART-1231-VUO3</div>
+                    <div class="note-meta">Published April 24, 2026</div>
+                    <div class="note-excerpt">
                         
 
     
@@ -2070,12 +2147,11 @@
     
         html, body { margin: 0; padding: 0; }
 
-        body {
-       ...
+  ...
                     </div>
                 </a>
             
-                <a href="article/basic-and-pre-algebra" class="post-item" 
+                <a href="article/basic-and-pre-algebra" class="note-item" 
                    data-title="basic &amp; pre-algebra"
                    data-content="&lt;!doctype html&gt;
 &lt;html&gt;&lt;head&gt;
@@ -2245,10 +2321,16 @@
 
 
 
-&lt;/body&gt;&lt;/html&gt;">
-                    <div class="post-title">Basic &amp; Pre-Algebra</div>
-                    <div class="post-meta">Posted on 2026-04-24</div>
-                    <div class="post-excerpt">
+&lt;/body&gt;&lt;/html&gt;"
+                   data-tags="">
+                    <span class="note-course">
+                        
+                            General Notes
+                        
+                    </span>
+                    <div class="note-title">Basic &amp; Pre-Algebra</div>
+                    <div class="note-meta">Published April 24, 2026</div>
+                    <div class="note-excerpt">
                         
 
     
@@ -2256,21 +2338,27 @@
     
     
     /*** Start default CSS ***/
-    * { margin: 0; padding: 0; f...
+    * { marg...
                     </div>
                 </a>
             
-                <a href="article/ewrtr" class="post-item" 
+                <a href="article/ewrtr" class="note-item" 
                    data-title="ewrtr"
-                   data-content="the internet is a good place to find educational work.">
-                    <div class="post-title">ewrtr</div>
-                    <div class="post-meta">Posted on 2026-04-23</div>
-                    <div class="post-excerpt">
+                   data-content="the internet is a good place to find educational work."
+                   data-tags="">
+                    <span class="note-course">
+                        
+                            General Notes
+                        
+                    </span>
+                    <div class="note-title">ewrtr</div>
+                    <div class="note-meta">Published April 23, 2026</div>
+                    <div class="note-excerpt">
                         The internet is a good place to find educational work....
                     </div>
                 </a>
             
-                <a href="article/1.-welcome-to-joplin!" class="post-item" 
+                <a href="article/1.-welcome-to-joplin!" class="note-item" 
                    data-title="1. welcome to joplin!"
                    data-content="# welcome to joplin!
 
@@ -2339,54 +2427,50 @@ the second way to organise your notes is using tags:
 - on **desktop**, right-click on any note in the note list, and select &#34;tags&#34;. you can then add the tags, separating them by commas.
 - on **mobile**, open the note and press the &#34;⋮&#34; button and select &#34;tags&#34;.
 - on **terminal**, type `:help tag` for the available commands.
-">
-                    <div class="post-title">1. Welcome to Joplin!</div>
-                    <div class="post-meta">Posted on 2026-04-23</div>
-                    <div class="post-excerpt">
+"
+                   data-tags="">
+                    <span class="note-course">
+                        
+                            General Notes
+                        
+                    </span>
+                    <div class="note-title">1. Welcome to Joplin!</div>
+                    <div class="note-meta">Published April 23, 2026</div>
+                    <div class="note-excerpt">
                         # Welcome to Joplin!
 
-Joplin is a free, open source note taking and to-do application, which helps you write and organise your notes, and synchronise them between your devices. The...
+Joplin is a free, open source note taking and to-do application, which helps you write and organise your notes, and synchronise them betwe...
                     </div>
                 </a>
             
         </div>
 
         <footer>
-            Updated 2026-04-24
+            Built with Joplin Pages Publisher. Updated 2026-04-24
         </footer>
     </div>
 
     <script>
         const btn = document.getElementById('theme-btn');
         const currentTheme = localStorage.getItem('theme');
-
         if (currentTheme) {
             document.documentElement.setAttribute('data-theme', currentTheme);
-            btn.textContent = currentTheme === 'dark' ? 'Light' : 'Dark';
         }
-
         btn.addEventListener('click', () => {
-            let theme = document.documentElement.getAttribute('data-theme');
-            if (theme === 'dark') {
-                theme = 'light';
-                btn.textContent = 'Dark';
-            } else {
-                theme = 'dark';
-                btn.textContent = 'Light';
-            }
+            let theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
             document.documentElement.setAttribute('data-theme', theme);
             localStorage.setItem('theme', theme);
         });
 
         const searchInput = document.getElementById('search-input');
-        const posts = document.querySelectorAll('.post-item');
-
+        const items = document.querySelectorAll('.note-item');
         searchInput.addEventListener('input', (e) => {
             const query = e.target.value.toLowerCase();
-            posts.forEach(post => {
-                const title = post.getAttribute('data-title');
-                const content = post.getAttribute('data-content');
-                post.style.display = (title.includes(query) || content.includes(query)) ? 'block' : 'none';
+            items.forEach(item => {
+                const title = item.getAttribute('data-title');
+                const content = item.getAttribute('data-content');
+                const tags = item.getAttribute('data-tags');
+                item.style.display = (title.includes(query) || content.includes(query) || tags.includes(query)) ? 'block' : 'none';
             });
         });
     </script>
